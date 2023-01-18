@@ -5,6 +5,7 @@ import lanchonete.desafio.api.domain.item.Lanche.Lanche;
 import lanchonete.desafio.api.domain.item.Pizza.Pizza;
 import lanchonete.desafio.api.domain.item.Salgadinho.Salgadinho;
 import lanchonete.desafio.api.domain.pedido.StatusPedido.StatusPedido;
+import lanchonete.desafio.api.infra.exeption.ValorPagoInsuficienteException;
 import lombok.*;
 
 import java.math.BigDecimal;
@@ -60,10 +61,10 @@ public class Pedido {
     }
 
 
-    public BigDecimal calcularTroco(BigDecimal valorPago) throws Exception {
+    public BigDecimal calcularTroco(BigDecimal valorPago) throws ValorPagoInsuficienteException {
         if (valorPago.compareTo(this.valorTotalServico) == -1) {
             this.troco = BigDecimal.ZERO;
-            throw new Exception("O valor pago R$: " + valorPago + " é menor que o total do serviço R$: " + this.valorTotalServico);
+            throw new ValorPagoInsuficienteException("O valor pago R$: " + valorPago + " é menor que o total do serviço R$: " + this.valorTotalServico);
         } else if (valorPago.compareTo(this.valorTotalServico) == 0) {
             this.troco = BigDecimal.ZERO;
             this.valorPago = valorPago;

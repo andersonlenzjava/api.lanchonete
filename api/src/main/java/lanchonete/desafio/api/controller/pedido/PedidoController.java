@@ -7,6 +7,7 @@ import jakarta.validation.Valid;
 import lanchonete.desafio.api.domain.pedido.Pedido.PedidoCompletoRegister;
 import lanchonete.desafio.api.domain.pedido.Pedido.PedidoCompletoResponse;
 import lanchonete.desafio.api.domain.pedido.Pedido.PedidoResponse;
+import lanchonete.desafio.api.infra.exeption.ValorPagoInsuficienteException;
 import lanchonete.desafio.api.service.pedido.PedidoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -82,7 +83,7 @@ public class PedidoController {
 	
 	@GetMapping("/calculaTroco/{pedidoId}")
 	@Transactional
-	public ResponseEntity<BigDecimal> retornaCalculoTrocoPedido(@PathVariable Long pedidoId, @RequestParam(required = true) BigDecimal valorPago) throws Exception {
+	public ResponseEntity<BigDecimal> retornaCalculoTrocoPedido(@PathVariable Long pedidoId, @RequestParam(required = true) BigDecimal valorPago) throws ValorPagoInsuficienteException {
 		return pedidoService.retornaCalculoTrocoPedido(pedidoId, valorPago);
 	} // estado pago se aprovar 
 

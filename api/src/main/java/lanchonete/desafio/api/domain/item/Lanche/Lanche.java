@@ -35,9 +35,11 @@ public class Lanche {
         this.lancheTipoPao = lancheTipoPao;
         this.lancheRecheio = lancheRecheio;
         this.lancheMolho = lancheMolho;
+        this.item = new Item();
+        this.CalculosLanche();
     }
 
-    public void CalculosPrato() {
+    public void CalculosLanche() {
         this.item.setTotalItem(   // se refere a esta classe
                 lancheTipoPao.getIngrediente().getPrecoVenda()
                         .add(lancheRecheio.getIngrediente().getPrecoVenda()

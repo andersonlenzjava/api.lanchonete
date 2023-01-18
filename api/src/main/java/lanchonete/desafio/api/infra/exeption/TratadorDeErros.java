@@ -35,6 +35,14 @@ public class TratadorDeErros {
         return ResponseEntity.badRequest().body(erros);
     }
 
+    // pega a minha exception e joga no corpo da requisição este erro
+    @ExceptionHandler(ValorPagoInsuficienteException.class)
+    public ResponseEntity tratarError400(ValorPagoInsuficienteException ex){
+        var erros = ex.getMessage();
+        return ResponseEntity.badRequest().body(erros);
+    }
+
+
     // record = dto --> simplificar o json enviado
     private record DadosErroValidacao(String campo, String mensagem) { // especificado só o que precisa
         public DadosErroValidacao(FieldError erro) { // construtor para o map

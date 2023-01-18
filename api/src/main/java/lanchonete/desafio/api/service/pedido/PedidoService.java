@@ -13,6 +13,7 @@ import lanchonete.desafio.api.domain.item.Salgadinho.Salgadinho;
 import lanchonete.desafio.api.domain.item.Salgadinho.SalgadinhoRepository;
 import lanchonete.desafio.api.domain.pedido.Pedido.*;
 import lanchonete.desafio.api.domain.pedido.StatusPedido.StatusPedido;
+import lanchonete.desafio.api.infra.exeption.ValorPagoInsuficienteException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -120,7 +121,7 @@ public class PedidoService {
 	}
 
 	// retorna o troco no corpo da mensagem 
-	public ResponseEntity<BigDecimal> retornaCalculoTrocoPedido(Long pedidoId, BigDecimal valorPago) throws Exception {
+	public ResponseEntity<BigDecimal> retornaCalculoTrocoPedido(Long pedidoId, BigDecimal valorPago) throws ValorPagoInsuficienteException {
 		Optional<Pedido> pedidoOptional = pedidoRepository.findById(pedidoId);
 		if (pedidoOptional.isPresent()) {
 			Pedido pedido = pedidoOptional.get();

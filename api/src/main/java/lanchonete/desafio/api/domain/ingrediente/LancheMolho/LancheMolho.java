@@ -22,9 +22,7 @@ public class LancheMolho {
     public String tipoMolho;
 
     public LancheMolho(BigDecimal precoVenda, String dataValidade, double peso, String tipoMolho) {
-        this.ingrediente.setPrecoVenda(precoVenda);
-        this.ingrediente.setDataValidade(dataValidade);
-        this.ingrediente.setPeso(peso);
+        this.ingrediente = new Ingrediente(precoVenda, dataValidade, peso);
         this.tipoMolho = tipoMolho;
 
     }

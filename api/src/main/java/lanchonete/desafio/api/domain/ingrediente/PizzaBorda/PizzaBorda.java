@@ -22,9 +22,7 @@ public class PizzaBorda {
     private String tipoBorda;
 
     public PizzaBorda(BigDecimal precoVenda, String dataValidade, double peso, String tipoBorda) {
-        this.ingrediente.setPrecoVenda(precoVenda);
-        this.ingrediente.setDataValidade(dataValidade);
-        this.ingrediente.setPeso(peso);
+        this.ingrediente = new Ingrediente(precoVenda, dataValidade, peso);
         this.tipoBorda = tipoBorda;
     }
 }

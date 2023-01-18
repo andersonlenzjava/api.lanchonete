@@ -22,9 +22,7 @@ public class SalgadinhoMassa {
     public String tipoMassa;
 
     public SalgadinhoMassa(BigDecimal precoVenda, String dataValidade, double peso, String tipoMassa) {
-        this.ingrediente.setPrecoVenda(precoVenda);
-        this.ingrediente.setDataValidade(dataValidade);
-        this.ingrediente.setPeso(peso);
+        this.ingrediente = new Ingrediente(precoVenda, dataValidade, peso);
         this.tipoMassa = tipoMassa;
     }
 }

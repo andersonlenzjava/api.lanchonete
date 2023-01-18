@@ -6,10 +6,6 @@ import jakarta.validation.constraints.NotNull;
 public record PedidoCompletoRegister(
         @NotNull
         @NotEmpty
-        Long id,
-
-        @NotNull
-        @NotEmpty
         String nomeCliente) {
 
         public Pedido converter() {

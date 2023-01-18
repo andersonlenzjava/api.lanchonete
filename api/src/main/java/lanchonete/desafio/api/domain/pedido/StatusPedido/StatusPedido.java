@@ -4,6 +4,6 @@ public enum StatusPedido {
 
     ABERTO,
     PAGOFINALIZADO,
-    PROCESSANDO;
+    PROCESSANDO
 
 }

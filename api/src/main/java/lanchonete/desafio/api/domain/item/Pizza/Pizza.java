@@ -35,6 +35,8 @@ public class Pizza {
         this.pizzaBorda = pizzaBorda;
         this.pizzaMolho = pizzaMolho;
         this.pizzaRecheio = pizzaRecheio;
+        this.item = new Item();
+        this.CalculosPizza();
     }
 
     public void CalculosPizza() {

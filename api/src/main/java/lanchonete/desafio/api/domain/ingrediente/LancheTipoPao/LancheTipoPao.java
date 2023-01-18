@@ -22,9 +22,7 @@ public class LancheTipoPao {
     public String tipoPao;
 
     public LancheTipoPao(BigDecimal precoVenda, String dataValidade, double peso, String tipoPao) {
-        this.ingrediente.setPrecoVenda(precoVenda);
-        this.ingrediente.setDataValidade(dataValidade);
-        this.ingrediente.setPeso(peso);
+        this.ingrediente = new Ingrediente(precoVenda, dataValidade, peso);
         this.tipoPao = tipoPao;
     }
 }

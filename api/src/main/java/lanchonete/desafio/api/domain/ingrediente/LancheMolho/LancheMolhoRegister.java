@@ -29,6 +29,6 @@ public record LancheMolhoRegister (
 
 ) {
         public LancheMolho converter() {
-                return new LancheMolho(precoVenda, dataValidade, peso, tipoMolho);
+                return new LancheMolho(this.precoVenda, this.dataValidade, this.peso, this.tipoMolho);
         }
 }

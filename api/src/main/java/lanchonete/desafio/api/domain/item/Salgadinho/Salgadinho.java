@@ -35,6 +35,8 @@ public class Salgadinho {
         this.salgadinhoMassa = salgadinhoMassa;
         this.salgadinhoRecheio = salgadinhoRecheio;
         this.salgadinhoTipoPreparo = salgadinhoTipoPreparo;
+        this.item = new Item();
+        this.CalculosSalgadinho();
     }
 
     public void CalculosSalgadinho() {

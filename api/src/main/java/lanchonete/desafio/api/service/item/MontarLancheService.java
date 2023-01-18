@@ -132,7 +132,7 @@ public class MontarLancheService {
 						lanche.setLancheMolho(lancheMolho);
 						lanche.setLancheRecheio(lancheRecheio);
 						lanche.setLancheTipoPao(lancheTipoPao);
-						lanche.CalculosPrato();
+						lanche.CalculosLanche();
 						
 						lancheRepository.save(lanche); 
 						

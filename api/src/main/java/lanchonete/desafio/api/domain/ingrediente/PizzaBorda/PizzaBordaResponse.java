@@ -6,11 +6,12 @@ import org.springframework.data.domain.Page;
 
 import java.math.BigDecimal;
 
-public record PizzaBordaResponse(Long id,
-                                    String tipoBorda,
-                                    BigDecimal precoVenda,
-                                    String dataValidade,
-                                    double peso) {
+public record PizzaBordaResponse(
+        Long id,
+        String tipoBorda,
+        BigDecimal precoVenda,
+        String dataValidade,
+        double peso) {
     public PizzaBordaResponse (PizzaBorda pizzaBorda) {
         this(pizzaBorda.getId(),
                 pizzaBorda.getTipoBorda(),

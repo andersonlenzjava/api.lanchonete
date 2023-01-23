@@ -67,13 +67,13 @@ public class MontarSalgadinhoService {
 	}
 
 	// Post
-	public ResponseEntity<MontarSalgadinhoResponse> cadastrarSalgadinho(MontarSalgadinhoRegister montarSalgadinhoForm,
+	public ResponseEntity<MontarSalgadinhoResponse> cadastrarSalgadinho(MontarSalgadinhoRegister montarSalgadinhoRegister,
 			UriComponentsBuilder uriBuilder) {
 		
-		Optional<Pedido> pedidoOptional = pedidoRepository.findById(montarSalgadinhoForm.pedidoId());
-		Optional<SalgadinhoMassa> salgadinhoMassaOptional = salgadinhoMassaRepository.findById(montarSalgadinhoForm.salgadinhoMassaId());
-		Optional<SalgadinhoRecheio> salgadinhoRecheioOptional = salgadinhoRecheioRepository.findById(montarSalgadinhoForm.salgadinhoRecheioId());
-		Optional<SalgadinhoTipoPreparo> salgadinhoTipoPreparoOptional = salgadinhoTipoPreparoRepository.findById(montarSalgadinhoForm.salgadinhoTipoPreparoId());
+		Optional<Pedido> pedidoOptional = pedidoRepository.findById(montarSalgadinhoRegister.pedidoId());
+		Optional<SalgadinhoMassa> salgadinhoMassaOptional = salgadinhoMassaRepository.findById(montarSalgadinhoRegister.salgadinhoMassaId());
+		Optional<SalgadinhoRecheio> salgadinhoRecheioOptional = salgadinhoRecheioRepository.findById(montarSalgadinhoRegister.salgadinhoRecheioId());
+		Optional<SalgadinhoTipoPreparo> salgadinhoTipoPreparoOptional = salgadinhoTipoPreparoRepository.findById(montarSalgadinhoRegister.salgadinhoTipoPreparoId());
 
 		if (pedidoOptional.isPresent()
 				&& salgadinhoMassaOptional.isPresent() 
@@ -104,13 +104,13 @@ public class MontarSalgadinhoService {
 	}
 
 	// put
-	public ResponseEntity<MontarSalgadinhoResponse> atualizarSalgadinho(Long salgadinhoId, MontarSalgadinhoRegister montarSalgadinhoForm) {
+	public ResponseEntity<MontarSalgadinhoResponse> atualizarSalgadinho(Long salgadinhoId, MontarSalgadinhoRegister montarSalgadinhoRegister) {
 		
-		Optional<Pedido> pedidoOptional = pedidoRepository.findById(montarSalgadinhoForm.pedidoId());
+		Optional<Pedido> pedidoOptional = pedidoRepository.findById(montarSalgadinhoRegister.pedidoId());
 		Optional<Salgadinho> salgadinhoOptional = salgadinhoRepository.findById(salgadinhoId);
-		Optional<SalgadinhoMassa> salgadinhoMassaOptional = salgadinhoMassaRepository.findById(montarSalgadinhoForm.salgadinhoMassaId());
-		Optional<SalgadinhoRecheio> salgadinhoRecheioOptional = salgadinhoRecheioRepository.findById(montarSalgadinhoForm.salgadinhoRecheioId());
-		Optional<SalgadinhoTipoPreparo> salgadinhoTipoPreparoOptional = salgadinhoTipoPreparoRepository.findById(montarSalgadinhoForm.salgadinhoTipoPreparoId());
+		Optional<SalgadinhoMassa> salgadinhoMassaOptional = salgadinhoMassaRepository.findById(montarSalgadinhoRegister.salgadinhoMassaId());
+		Optional<SalgadinhoRecheio> salgadinhoRecheioOptional = salgadinhoRecheioRepository.findById(montarSalgadinhoRegister.salgadinhoRecheioId());
+		Optional<SalgadinhoTipoPreparo> salgadinhoTipoPreparoOptional = salgadinhoTipoPreparoRepository.findById(montarSalgadinhoRegister.salgadinhoTipoPreparoId());
 
 		if (pedidoOptional.isPresent()
 				&& salgadinhoOptional.isPresent()

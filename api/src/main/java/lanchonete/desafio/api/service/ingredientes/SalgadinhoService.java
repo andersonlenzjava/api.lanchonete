@@ -54,9 +54,9 @@ public class SalgadinhoService {
 	}
 
 	//cadastrar
-	public ResponseEntity<SalgadinhoMassaResponse> cadastrarSalgadinhoMassa(@Valid SalgadinhoMassaRegister salgadinhoMassaForm,
+	public ResponseEntity<SalgadinhoMassaResponse> cadastrarSalgadinhoMassa(@Valid SalgadinhoMassaRegister salgadinhoMassaRegister,
 			UriComponentsBuilder uriBuilder) throws ItemJaExisteException {
-		SalgadinhoMassa salgadinhoTipoMassa = salgadinhoMassaForm.converter();
+		SalgadinhoMassa salgadinhoTipoMassa = salgadinhoMassaRegister.converter();
 		Optional<SalgadinhoMassa> salgadinhoTipoMassaOptional = salgadinhoMassaRepository.findByTipoMassaIgnoreCase(salgadinhoTipoMassa.getTipoMassa());
 		if (salgadinhoTipoMassaOptional.isEmpty()) {
 			salgadinhoMassaRepository.save(salgadinhoTipoMassa);
@@ -69,15 +69,15 @@ public class SalgadinhoService {
 	
 	//atualizar
 	public ResponseEntity<SalgadinhoMassaResponse> atualizarSalgadinhoMassa(Long id,
-			@Valid SalgadinhoMassaRegister salgadinhoMassaForm) {
+			@Valid SalgadinhoMassaRegister salgadinhoMassaRegister) {
 		Optional<SalgadinhoMassa> salgadinhoMassaOptional = salgadinhoMassaRepository.findById(id);
 		if (salgadinhoMassaOptional.isPresent()) {
 			
 			SalgadinhoMassa salgadinhoMassa = salgadinhoMassaOptional.get();
-			salgadinhoMassa.setTipoMassa(salgadinhoMassaForm.tipoMassa());
-			salgadinhoMassa.getIngrediente().setPeso(salgadinhoMassaForm.peso());
-			salgadinhoMassa.getIngrediente().setDataValidade(salgadinhoMassaForm.dataValidade());
-			salgadinhoMassa.getIngrediente().setPrecoVenda(salgadinhoMassaForm.precoVenda());
+			salgadinhoMassa.setTipoMassa(salgadinhoMassaRegister.tipoMassa());
+			salgadinhoMassa.getIngrediente().setPeso(salgadinhoMassaRegister.peso());
+			salgadinhoMassa.getIngrediente().setDataValidade(salgadinhoMassaRegister.dataValidade());
+			salgadinhoMassa.getIngrediente().setPrecoVenda(salgadinhoMassaRegister.precoVenda());
 			salgadinhoMassaRepository.save(salgadinhoMassa);
 			
 			return ResponseEntity.ok(new SalgadinhoMassaResponse(salgadinhoMassa));
@@ -124,9 +124,9 @@ public class SalgadinhoService {
 	}
 
 	//cadastrar
-	public ResponseEntity<SalgadinhoRecheioResponse> cadastrarSalgadinhoRecheio(SalgadinhoRecheioRegister salgadinhoRecheioForm,
+	public ResponseEntity<SalgadinhoRecheioResponse> cadastrarSalgadinhoRecheio(SalgadinhoRecheioRegister salgadinhoRecheioRegister,
 																				UriComponentsBuilder uriBuilder) throws ItemJaExisteException {
-		SalgadinhoRecheio salgadinhoRecheio = salgadinhoRecheioForm.converter();
+		SalgadinhoRecheio salgadinhoRecheio = salgadinhoRecheioRegister.converter();
 		Optional<SalgadinhoRecheio> salgadinhoRecheioOptional = salgadinhoRecheioRepository.findByTipoRecheioIgnoreCase(salgadinhoRecheio.getTipoRecheio());
 		if (salgadinhoRecheioOptional.isEmpty()) {
 			salgadinhoRecheioRepository.save(salgadinhoRecheio);
@@ -139,15 +139,15 @@ public class SalgadinhoService {
 	
 	//atualizar
 	public ResponseEntity<SalgadinhoRecheioResponse> atualizarSalgadinhoRecheio(Long id,
-			@Valid SalgadinhoRecheioRegister salgadinhoRecheioForm) {
+			@Valid SalgadinhoRecheioRegister salgadinhoRecheioRegister) {
 		Optional<SalgadinhoRecheio> salgadinhoRecheioOptional = salgadinhoRecheioRepository.findById(id);
 		if (salgadinhoRecheioOptional.isPresent()) {
 			
 			SalgadinhoRecheio salgadinhoRecheio = salgadinhoRecheioOptional.get();
-			salgadinhoRecheio.setTipoRecheio(salgadinhoRecheioForm.tipoRecheio());
-			salgadinhoRecheio.getIngrediente().setPeso(salgadinhoRecheioForm.peso());
-			salgadinhoRecheio.getIngrediente().setDataValidade(salgadinhoRecheioForm.dataValidade());
-			salgadinhoRecheio.getIngrediente().setPrecoVenda(salgadinhoRecheioForm.precoVenda());
+			salgadinhoRecheio.setTipoRecheio(salgadinhoRecheioRegister.tipoRecheio());
+			salgadinhoRecheio.getIngrediente().setPeso(salgadinhoRecheioRegister.peso());
+			salgadinhoRecheio.getIngrediente().setDataValidade(salgadinhoRecheioRegister.dataValidade());
+			salgadinhoRecheio.getIngrediente().setPrecoVenda(salgadinhoRecheioRegister.precoVenda());
 			salgadinhoRecheioRepository.save(salgadinhoRecheio);
 			
 			return ResponseEntity.ok(new SalgadinhoRecheioResponse(salgadinhoRecheio));
@@ -195,8 +195,8 @@ public class SalgadinhoService {
 
 	//cadastrar
 	public ResponseEntity<SalgadinhoTipoPreparoResponse> cadastrarSalgadinhoTipoPreparo(
-			SalgadinhoTipoPreparoRegister salgadinhoTipoPreparoForm, UriComponentsBuilder uriBuilder) throws ItemJaExisteException {
-		SalgadinhoTipoPreparo salgadinhoTipoPreparo = salgadinhoTipoPreparoForm.converter();
+			SalgadinhoTipoPreparoRegister salgadinhoTipoPreparoRegister, UriComponentsBuilder uriBuilder) throws ItemJaExisteException {
+		SalgadinhoTipoPreparo salgadinhoTipoPreparo = salgadinhoTipoPreparoRegister.converter();
 		Optional<SalgadinhoTipoPreparo> salgadinhoTipoPreparoOptional = salgadinhoTipoPreparoRepository.findByTipoPreparoIgnoreCase(salgadinhoTipoPreparo.getTipoPreparo());
 		if (salgadinhoTipoPreparoOptional.isEmpty()) {
 			salgadinhoTipoPreparoRepository.save(salgadinhoTipoPreparo);
@@ -209,15 +209,15 @@ public class SalgadinhoService {
 
 	//atualizar
 	public ResponseEntity<SalgadinhoTipoPreparoResponse> atualizarSalgadinhoTipoPreparo(Long id,
-			@Valid SalgadinhoTipoPreparoRegister salgadinhoTipoPreparoForm) {
+			@Valid SalgadinhoTipoPreparoRegister salgadinhoTipoPreparoRegister) {
 		Optional<SalgadinhoTipoPreparo> salgadinhoTipoPreparoOptional = salgadinhoTipoPreparoRepository.findById(id);
 		if (salgadinhoTipoPreparoOptional.isPresent()) {
 			
 			SalgadinhoTipoPreparo salgadinhoTipoPreparo = salgadinhoTipoPreparoOptional.get();
-			salgadinhoTipoPreparo.setTipoPreparo(salgadinhoTipoPreparoForm.tipoPreparo());
-			salgadinhoTipoPreparo.getIngrediente().setPeso(salgadinhoTipoPreparoForm.peso());
-			salgadinhoTipoPreparo.getIngrediente().setDataValidade(salgadinhoTipoPreparoForm.dataValidade());
-			salgadinhoTipoPreparo.getIngrediente().setPrecoVenda(salgadinhoTipoPreparoForm.precoVenda());
+			salgadinhoTipoPreparo.setTipoPreparo(salgadinhoTipoPreparoRegister.tipoPreparo());
+			salgadinhoTipoPreparo.getIngrediente().setPeso(salgadinhoTipoPreparoRegister.peso());
+			salgadinhoTipoPreparo.getIngrediente().setDataValidade(salgadinhoTipoPreparoRegister.dataValidade());
+			salgadinhoTipoPreparo.getIngrediente().setPrecoVenda(salgadinhoTipoPreparoRegister.precoVenda());
 			salgadinhoTipoPreparoRepository.save(salgadinhoTipoPreparo);
 			
 			return ResponseEntity.ok(new SalgadinhoTipoPreparoResponse(salgadinhoTipoPreparo));

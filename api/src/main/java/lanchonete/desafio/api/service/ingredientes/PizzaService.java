@@ -54,9 +54,9 @@ public class PizzaService {
 	}
 
 	//cadastrar
-	public ResponseEntity<PizzaBordaResponse> cadastrarPizzaBorda(PizzaBordaRegister pizzaBordaForm,
+	public ResponseEntity<PizzaBordaResponse> cadastrarPizzaBorda(PizzaBordaRegister pizzaBordaRegister,
 																  UriComponentsBuilder uriBuilder) throws ItemJaExisteException {
-		PizzaBorda pizzaBorda = pizzaBordaForm.converter();
+		PizzaBorda pizzaBorda = pizzaBordaRegister.converter();
 		Optional<PizzaBorda> pizzaBordaOptional = pizzaBordaRepository.findByTipoBordaIgnoreCase(pizzaBorda.getTipoBorda());
 		if (pizzaBordaOptional.isEmpty()) {
 			pizzaBordaRepository.save(pizzaBorda);
@@ -68,15 +68,15 @@ public class PizzaService {
 	}
 	
 	//atualizar
-	public ResponseEntity<PizzaBordaResponse> atualizarLancheTipoPao(Long id,PizzaBordaRegister pizzaBordaForm) {
+	public ResponseEntity<PizzaBordaResponse> atualizarLancheTipoPao(Long id,PizzaBordaRegister pizzaBordaRegister) {
 		Optional<PizzaBorda> pizzaBordaOptional = pizzaBordaRepository.findById(id);
 		if (pizzaBordaOptional.isPresent()) {
 			
 			PizzaBorda pizzaBorda = pizzaBordaOptional.get();
-			pizzaBorda.setTipoBorda(pizzaBordaForm.tipoBorda());
-			pizzaBorda.getIngrediente().setPeso(pizzaBordaForm.peso());
-			pizzaBorda.getIngrediente().setDataValidade(pizzaBordaForm.dataValidade());
-			pizzaBorda.getIngrediente().setPrecoVenda(pizzaBordaForm.precoVenda());
+			pizzaBorda.setTipoBorda(pizzaBordaRegister.tipoBorda());
+			pizzaBorda.getIngrediente().setPeso(pizzaBordaRegister.peso());
+			pizzaBorda.getIngrediente().setDataValidade(pizzaBordaRegister.dataValidade());
+			pizzaBorda.getIngrediente().setPrecoVenda(pizzaBordaRegister.precoVenda());
 			pizzaBordaRepository.save(pizzaBorda);
 			
 			return ResponseEntity.ok(new PizzaBordaResponse(pizzaBorda));
@@ -122,9 +122,9 @@ public class PizzaService {
 	}
 
 	//cadastrar
-	public ResponseEntity<PizzaMolhoReponse> cadastrarPizzaMolho(PizzaMolhoRegister pizzaMolhoForm,
+	public ResponseEntity<PizzaMolhoReponse> cadastrarPizzaMolho(PizzaMolhoRegister pizzaMolhoRegister,
 			UriComponentsBuilder uriBuilder) throws ItemJaExisteException {
-		PizzaMolho pizzaMolho = pizzaMolhoForm.converter();
+		PizzaMolho pizzaMolho = pizzaMolhoRegister.converter();
 		Optional<PizzaMolho> pizzaMolhoOptional = pizzaMolhoRepository.findByTipoMolhoIgnoreCase(pizzaMolho.getTipoMolho());
 		if (pizzaMolhoOptional.isEmpty()) {
 			pizzaMolhoRepository.save(pizzaMolho);
@@ -136,15 +136,15 @@ public class PizzaService {
 	}
 	
 	//atualizar
-	public ResponseEntity<PizzaMolhoReponse> atualizarLancheTipoPao(Long id, PizzaMolhoRegister pizzaMolhoForm) {
+	public ResponseEntity<PizzaMolhoReponse> atualizarLancheTipoPao(Long id, PizzaMolhoRegister pizzaMolhoRegister) {
 		Optional<PizzaMolho> pizzaMolhoOptional = pizzaMolhoRepository.findById(id);
 		if (pizzaMolhoOptional.isPresent()) {
 			
 			PizzaMolho pizzaMolho = pizzaMolhoOptional.get();
-			pizzaMolho.setTipoMolho(pizzaMolhoForm.tipoMolho());
-			pizzaMolho.getIngrediente().setPeso(pizzaMolhoForm.peso());
-			pizzaMolho.getIngrediente().setDataValidade(pizzaMolhoForm.dataValidade());
-			pizzaMolho.getIngrediente().setPrecoVenda(pizzaMolhoForm.precoVenda());
+			pizzaMolho.setTipoMolho(pizzaMolhoRegister.tipoMolho());
+			pizzaMolho.getIngrediente().setPeso(pizzaMolhoRegister.peso());
+			pizzaMolho.getIngrediente().setDataValidade(pizzaMolhoRegister.dataValidade());
+			pizzaMolho.getIngrediente().setPrecoVenda(pizzaMolhoRegister.precoVenda());
 			pizzaMolhoRepository.save(pizzaMolho);
 			
 			return ResponseEntity.ok(new PizzaMolhoReponse(pizzaMolho));
@@ -191,9 +191,9 @@ public class PizzaService {
 	}
 
 	//cadastrar
-	public ResponseEntity<PizzaRecheioResponse> cadastrarPizzaRecheio(PizzaRecheioRegister pizzaRecheioForm,
+	public ResponseEntity<PizzaRecheioResponse> cadastrarPizzaRecheio(PizzaRecheioRegister pizzaRecheioRegister,
 																	  UriComponentsBuilder uriBuilder) throws ItemJaExisteException {
-		PizzaRecheio pizzaRecheio = pizzaRecheioForm.converter();
+		PizzaRecheio pizzaRecheio = pizzaRecheioRegister.converter();
 		Optional<PizzaRecheio> pizzaRecheioOptional = pizzaRecheioRepository.findByTipoRecheioIgnoreCase(pizzaRecheio.getTipoRecheio());
 		if (pizzaRecheioOptional.isEmpty()) {
 			pizzaRecheioRepository.save(pizzaRecheio);
@@ -205,15 +205,15 @@ public class PizzaService {
 	}
 
 	//atualizar
-	public ResponseEntity<PizzaRecheioResponse> atualizarPizzaRecheio(Long id,PizzaRecheioRegister pizzaRecheioForm) {
+	public ResponseEntity<PizzaRecheioResponse> atualizarPizzaRecheio(Long id,PizzaRecheioRegister pizzaRecheioRegister) {
 		Optional<PizzaRecheio> pizzaRecheioOptional = pizzaRecheioRepository.findById(id);
 		if (pizzaRecheioOptional.isPresent()) {
 			
 			PizzaRecheio pizzaRecheio = pizzaRecheioOptional.get();
-			pizzaRecheio.setTipoRecheio(pizzaRecheioForm.tipoRecheio());
-			pizzaRecheio.getIngrediente().setPeso(pizzaRecheioForm.peso());
-			pizzaRecheio.getIngrediente().setDataValidade(pizzaRecheioForm.dataValidade());
-			pizzaRecheio.getIngrediente().setPrecoVenda(pizzaRecheioForm.precoVenda());
+			pizzaRecheio.setTipoRecheio(pizzaRecheioRegister.tipoRecheio());
+			pizzaRecheio.getIngrediente().setPeso(pizzaRecheioRegister.peso());
+			pizzaRecheio.getIngrediente().setDataValidade(pizzaRecheioRegister.dataValidade());
+			pizzaRecheio.getIngrediente().setPrecoVenda(pizzaRecheioRegister.precoVenda());
 			pizzaRecheioRepository.save(pizzaRecheio);
 			
 			return ResponseEntity.ok(new PizzaRecheioResponse(pizzaRecheio));

@@ -69,13 +69,13 @@ public class MontarPizzaService {
 	}
 
 	// post
-	public ResponseEntity<MontarPizzaResponse> cadastrarPizza(MontarPizzaRegister montarPizzaForm,
+	public ResponseEntity<MontarPizzaResponse> cadastrarPizza(MontarPizzaRegister montarPizzaRegister,
 															  UriComponentsBuilder uriBuilder) {
 		
-		Optional<Pedido> pedidoOptional = pedidoRepository.findById(montarPizzaForm.pedidoId());
-		Optional<PizzaBorda> pizzaBordaOptional = pizzaBordaRepository.findById(montarPizzaForm.pizzaBordaId());
-		Optional<PizzaMolho> pizzaMolhoOptional = pizzaMolhoRepository.findById(montarPizzaForm.pizzaMolhoId());
-		Optional<PizzaRecheio> pizzaRecheioOptional = pizzaRecheioRepository.findById(montarPizzaForm.pizzaRecheioId());
+		Optional<Pedido> pedidoOptional = pedidoRepository.findById(montarPizzaRegister.pedidoId());
+		Optional<PizzaBorda> pizzaBordaOptional = pizzaBordaRepository.findById(montarPizzaRegister.pizzaBordaId());
+		Optional<PizzaMolho> pizzaMolhoOptional = pizzaMolhoRepository.findById(montarPizzaRegister.pizzaMolhoId());
+		Optional<PizzaRecheio> pizzaRecheioOptional = pizzaRecheioRepository.findById(montarPizzaRegister.pizzaRecheioId());
 		
 		if (pedidoOptional.isPresent()
 				&& pizzaBordaOptional.isPresent()
@@ -106,13 +106,13 @@ public class MontarPizzaService {
 	}
 
 	// put
-	public ResponseEntity<MontarPizzaResponse> atualizarPizza(Long pizzaId, MontarPizzaRegister montarPizzaForm) {
+	public ResponseEntity<MontarPizzaResponse> atualizarPizza(Long pizzaId, MontarPizzaRegister montarPizzaRegister) {
 
-		Optional<Pedido> pedidoOptional = pedidoRepository.findById(montarPizzaForm.pedidoId());
+		Optional<Pedido> pedidoOptional = pedidoRepository.findById(montarPizzaRegister.pedidoId());
 		Optional<Pizza> pizzaOptional = pizzaRepository.findById(pizzaId);
-		Optional<PizzaBorda> pizzaBordaOptional = pizzaBordaRepository.findById(montarPizzaForm.pizzaBordaId()); // 3,4,5
-		Optional<PizzaMolho> pizzaMolhoOptional = pizzaMolhoRepository.findById(montarPizzaForm.pizzaMolhoId());
-		Optional<PizzaRecheio> pizzaRecheioOptional = pizzaRecheioRepository.findById(montarPizzaForm.pizzaRecheioId());
+		Optional<PizzaBorda> pizzaBordaOptional = pizzaBordaRepository.findById(montarPizzaRegister.pizzaBordaId()); // 3,4,5
+		Optional<PizzaMolho> pizzaMolhoOptional = pizzaMolhoRepository.findById(montarPizzaRegister.pizzaMolhoId());
+		Optional<PizzaRecheio> pizzaRecheioOptional = pizzaRecheioRepository.findById(montarPizzaRegister.pizzaRecheioId());
 		
 		if (pedidoOptional.isPresent() 
 				&& pizzaOptional.isPresent()

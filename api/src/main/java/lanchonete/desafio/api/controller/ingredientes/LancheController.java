@@ -38,15 +38,15 @@ public class LancheController {
 
     @PostMapping("/molho")
     @Transactional
-    public ResponseEntity<LancheMolhoResponse> cadastrarMolho(@RequestBody @Valid LancheMolhoRegister lancheMolhoForm,
+    public ResponseEntity<LancheMolhoResponse> cadastrarMolho(@RequestBody @Valid LancheMolhoRegister lancheMolhoRegister,
                                                          UriComponentsBuilder uriBuilder) throws Exception {
-        return lancheService.cadastrarLancheMolho(lancheMolhoForm, uriBuilder);
+        return lancheService.cadastrarLancheMolho(lancheMolhoRegister, uriBuilder);
     }
 
     @PutMapping("/molho/{id}")
     @Transactional
-    public ResponseEntity<LancheMolhoResponse> atualizarLancheMolho(@PathVariable Long id, @RequestBody @Valid LancheMolhoRegister lancheMolhoForm) {
-        return lancheService.atualizarLancheMolho(id, lancheMolhoForm);
+    public ResponseEntity<LancheMolhoResponse> atualizarLancheMolho(@PathVariable Long id, @RequestBody @Valid LancheMolhoRegister lancheMolhoRegister) {
+        return lancheService.atualizarLancheMolho(id, lancheMolhoRegister);
     }
 
 
@@ -71,15 +71,15 @@ public class LancheController {
 
     @PostMapping("/recheio")
     @Transactional
-    public ResponseEntity<LancheRecheioResponse> cadastraLancheRecheio(@RequestBody @Valid LancheRecheioRegister lancheRecheioForm,
+    public ResponseEntity<LancheRecheioResponse> cadastraLancheRecheio(@RequestBody @Valid LancheRecheioRegister lancheRecheioRegister,
                                                                   UriComponentsBuilder uriBuilder) throws Exception {
-        return lancheService.cadastrarLancheRecheio(lancheRecheioForm, uriBuilder);
+        return lancheService.cadastrarLancheRecheio(lancheRecheioRegister, uriBuilder);
     }
 
     @PutMapping("/recheio/{id}")
     @Transactional
-    public ResponseEntity<LancheRecheioResponse> atualizarLancheRecheio(@PathVariable Long id, @RequestBody @Valid LancheRecheioRegister lancheRecheioForm) {
-        return lancheService.atualizarLancheRecheio(id, lancheRecheioForm);
+    public ResponseEntity<LancheRecheioResponse> atualizarLancheRecheio(@PathVariable Long id, @RequestBody @Valid LancheRecheioRegister lancheRecheioRegister) {
+        return lancheService.atualizarLancheRecheio(id, lancheRecheioRegister);
     }
 
     @DeleteMapping("/recheio/{id}")
@@ -103,15 +103,15 @@ public class LancheController {
 
     @PostMapping("/tipoPao")
     @Transactional
-    public ResponseEntity<LancheTipoPaoResponse> cadastrarLancheTipoPao(@RequestBody @Valid LancheTipoPaoRegister lancheTipoPaoForm,
+    public ResponseEntity<LancheTipoPaoResponse> cadastrarLancheTipoPao(@RequestBody @Valid LancheTipoPaoRegister lancheTipoPaoRegister,
                                                                    UriComponentsBuilder uriBuilder) throws Exception {
-        return lancheService.cadastrarLancheTipoPao(lancheTipoPaoForm, uriBuilder);
+        return lancheService.cadastrarLancheTipoPao(lancheTipoPaoRegister, uriBuilder);
     }
 
     @PutMapping("/tipoPao/{id}")
     @Transactional
-    public ResponseEntity<LancheTipoPaoResponse> atualizarLancheTipoPao(@PathVariable Long id, @RequestBody @Valid LancheTipoPaoRegister lancheTipoPaoForm) {
-        return lancheService.atualizarLancheTipoPao(id, lancheTipoPaoForm);
+    public ResponseEntity<LancheTipoPaoResponse> atualizarLancheTipoPao(@PathVariable Long id, @RequestBody @Valid LancheTipoPaoRegister lancheTipoPaoRegister) {
+        return lancheService.atualizarLancheTipoPao(id, lancheTipoPaoRegister);
     }
 
     @DeleteMapping("/tipoPao/{id}")

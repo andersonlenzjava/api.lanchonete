@@ -57,9 +57,9 @@ public class LancheService {
 	}
 	
 	//cadastrar
-		public ResponseEntity<LancheMolhoResponse> cadastrarLancheMolho(LancheMolhoRegister lancheMolhoForm,
+		public ResponseEntity<LancheMolhoResponse> cadastrarLancheMolho(LancheMolhoRegister lancheMolhoRegister,
 				UriComponentsBuilder uriBuilder) throws Exception {
-			LancheMolho lancheMolho = lancheMolhoForm.converter();
+			LancheMolho lancheMolho = lancheMolhoRegister.converter();
 			Optional<LancheMolho> lancheMolhoOptional = lancheMolhoRepository.findByTipoMolhoIgnoreCase(lancheMolho.getTipoMolho());
 			if (lancheMolhoOptional.isEmpty()) {
 				lancheMolhoRepository.save(lancheMolho);
@@ -71,15 +71,15 @@ public class LancheService {
 		}
 		
 		//atualizar
-		public ResponseEntity<LancheMolhoResponse> atualizarLancheMolho(Long id, LancheMolhoRegister lancheMolhoForm) {
+		public ResponseEntity<LancheMolhoResponse> atualizarLancheMolho(Long id, LancheMolhoRegister lancheMolhoRegister) {
 			Optional<LancheMolho> lancheMolhoOptional = lancheMolhoRepository.findById(id);
 			if (lancheMolhoOptional.isPresent()) {
 				
 				LancheMolho lancheMolho = lancheMolhoOptional.get();
-				lancheMolho.setTipoMolho(lancheMolhoForm.tipoMolho());
-				lancheMolho.getIngrediente().setPeso(lancheMolhoForm.peso());
-				lancheMolho.getIngrediente().setDataValidade(lancheMolhoForm.dataValidade());
-				lancheMolho.getIngrediente().setPrecoVenda(lancheMolhoForm.precoVenda());
+				lancheMolho.setTipoMolho(lancheMolhoRegister.tipoMolho());
+				lancheMolho.getIngrediente().setPeso(lancheMolhoRegister.peso());
+				lancheMolho.getIngrediente().setDataValidade(lancheMolhoRegister.dataValidade());
+				lancheMolho.getIngrediente().setPrecoVenda(lancheMolhoRegister.precoVenda());
 				lancheMolhoRepository.save(lancheMolho);
 				
 				return ResponseEntity.ok(new LancheMolhoResponse(lancheMolho));
@@ -125,9 +125,9 @@ public class LancheService {
 		}
 		
 		//cadastrar
-			public ResponseEntity<LancheRecheioResponse> cadastrarLancheRecheio(LancheRecheioRegister lancheRecheioForm,
+			public ResponseEntity<LancheRecheioResponse> cadastrarLancheRecheio(LancheRecheioRegister lancheRecheioRegister,
 					UriComponentsBuilder uriBuilder) throws Exception {
-				LancheRecheio lancheRecheio = lancheRecheioForm.converter();
+				LancheRecheio lancheRecheio = lancheRecheioRegister.converter();
 				Optional<LancheRecheio> lancheRecheioOptional = lancheRecheioRepository.findByTipoRecheioIgnoreCase(lancheRecheio.getTipoRecheio());
 				if (lancheRecheioOptional.isEmpty()) {
 					lancheRecheioRepository.save(lancheRecheio);
@@ -140,15 +140,15 @@ public class LancheService {
 			
 			//atualizar
 			public ResponseEntity<LancheRecheioResponse> atualizarLancheRecheio(Long id,
-					@Valid LancheRecheioRegister lancheRecheioForm) {
+					@Valid LancheRecheioRegister lancheRecheioRegister) {
 				Optional<LancheRecheio> lancheRecheioOptional = lancheRecheioRepository.findById(id);
 				if (lancheRecheioOptional.isPresent()) {
 					
 					LancheRecheio lancheRecheio = lancheRecheioOptional.get();
-					lancheRecheio.setTipoRecheio(lancheRecheioForm.tipoRecheio());
-					lancheRecheio.getIngrediente().setPeso(lancheRecheioForm.peso());
-					lancheRecheio.getIngrediente().setDataValidade(lancheRecheioForm.dataValidade());
-					lancheRecheio.getIngrediente().setPrecoVenda(lancheRecheioForm.precoVenda());
+					lancheRecheio.setTipoRecheio(lancheRecheioRegister.tipoRecheio());
+					lancheRecheio.getIngrediente().setPeso(lancheRecheioRegister.peso());
+					lancheRecheio.getIngrediente().setDataValidade(lancheRecheioRegister.dataValidade());
+					lancheRecheio.getIngrediente().setPrecoVenda(lancheRecheioRegister.precoVenda());
 					lancheRecheioRepository.save(lancheRecheio);
 					
 					return ResponseEntity.ok(new LancheRecheioResponse(lancheRecheio));
@@ -194,9 +194,9 @@ public class LancheService {
 			}
 			
 			//cadastrar
-				public ResponseEntity<LancheTipoPaoResponse> cadastrarLancheTipoPao(LancheTipoPaoRegister lancheTipoPaoForm,
+				public ResponseEntity<LancheTipoPaoResponse> cadastrarLancheTipoPao(LancheTipoPaoRegister lancheTipoPaoRegister,
 						UriComponentsBuilder uriBuilder) throws Exception {
-					LancheTipoPao lancheTipoPao = lancheTipoPaoForm.converter();
+					LancheTipoPao lancheTipoPao = lancheTipoPaoRegister.converter();
 					Optional<LancheTipoPao> lancheTipoPaoOptional = lancheTipoPaoRepository.findByTipoPaoIgnoreCase(lancheTipoPao.getTipoPao());
 					if (lancheTipoPaoOptional.isEmpty()) {
 						lancheTipoPaoRepository.save(lancheTipoPao);
@@ -209,15 +209,15 @@ public class LancheService {
 				
 			//atualizar 	
 				public ResponseEntity<LancheTipoPaoResponse> atualizarLancheTipoPao(Long id,
-						@Valid LancheTipoPaoRegister lancheTipoPaoForm) {
+						@Valid LancheTipoPaoRegister lancheTipoPaoRegister) {
 					Optional<LancheTipoPao> lancheTipoPaoOptional = lancheTipoPaoRepository.findById(id);
 					if (lancheTipoPaoOptional.isPresent()) {
 						
 						LancheTipoPao lancheTipoPao = lancheTipoPaoOptional.get();
-						lancheTipoPao.setTipoPao(lancheTipoPaoForm.tipoPao());
-						lancheTipoPao.getIngrediente().setPeso(lancheTipoPaoForm.peso());
-						lancheTipoPao.getIngrediente().setDataValidade(lancheTipoPaoForm.dataValidade());
-						lancheTipoPao.getIngrediente().setPrecoVenda(lancheTipoPaoForm.precoVenda());
+						lancheTipoPao.setTipoPao(lancheTipoPaoRegister.tipoPao());
+						lancheTipoPao.getIngrediente().setPeso(lancheTipoPaoRegister.peso());
+						lancheTipoPao.getIngrediente().setDataValidade(lancheTipoPaoRegister.dataValidade());
+						lancheTipoPao.getIngrediente().setPrecoVenda(lancheTipoPaoRegister.precoVenda());
 						lancheTipoPaoRepository.save(lancheTipoPao);
 						
 						return ResponseEntity.ok(new LancheTipoPaoResponse(lancheTipoPao));

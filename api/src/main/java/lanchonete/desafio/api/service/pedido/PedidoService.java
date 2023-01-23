@@ -96,22 +96,22 @@ public class PedidoService {
 	} 
 
 	// cadastrar pedido
-	public ResponseEntity<PedidoResponse> cadastrarPedido(PedidoCompletoRegister pedidoForm, UriComponentsBuilder uriBuilder) {
-		Pedido pedido = pedidoForm.converter();
+	public ResponseEntity<PedidoResponse> cadastrarPedido(PedidoCompletoRegister pedidoCompletoRegister, UriComponentsBuilder uriBuilder) {
+		Pedido pedido = pedidoCompletoRegister.converter();
 		pedidoRepository.save(pedido);
 		URI uri = uriBuilder.path("/pedido/{id}").buildAndExpand(pedido.getId()).toUri();
 		return ResponseEntity.created(uri).body(new PedidoResponse(pedido));
 	}
 
 	// atualizar pedido
-	public ResponseEntity<PedidoResponse> atualizarPedido(Long pedidoId, PedidoCompletoRegister pedidoForm, UriComponentsBuilder uriBuilder) {
+	public ResponseEntity<PedidoResponse> atualizarPedido(Long pedidoId, PedidoCompletoRegister pedidoCompletoRegister, UriComponentsBuilder uriBuilder) {
 		Optional<Pedido> pedidoOptional = pedidoRepository.findById(pedidoId);
 		if (pedidoOptional.isPresent()) {
 			
 			Pedido pedido = pedidoOptional.get();
 			if (pedido.getStatusPedido() != StatusPedido.PAGOFINALIZADO) {
 
-				pedido.setNomeCliente(pedidoForm.nomeCliente());
+				pedido.setNomeCliente(pedidoCompletoRegister.nomeCliente());
 				pedidoRepository.save(pedido);
 
 				return ResponseEntity.ok(new PedidoResponse(pedido));

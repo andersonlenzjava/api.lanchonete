@@ -38,15 +38,15 @@ public class SalgadinhoController {
 
     @PostMapping("/massa")
     @Transactional
-    public ResponseEntity<SalgadinhoMassaResponse> cadastrarSalgadinhoMassa(@RequestBody @Valid SalgadinhoMassaRegister salgadinhoMassaForm,
+    public ResponseEntity<SalgadinhoMassaResponse> cadastrarSalgadinhoMassa(@RequestBody @Valid SalgadinhoMassaRegister salgadinhoMassaRegister,
                                                                             UriComponentsBuilder uriBuilder) throws Exception {
-        return salgadinhoService.cadastrarSalgadinhoMassa(salgadinhoMassaForm, uriBuilder);
+        return salgadinhoService.cadastrarSalgadinhoMassa(salgadinhoMassaRegister, uriBuilder);
     }
 
     @PutMapping("/massa/{id}")
     @Transactional
-    public ResponseEntity<SalgadinhoMassaResponse> atualizarSalgadinhoMassa(@PathVariable Long id, @RequestBody @Valid SalgadinhoMassaRegister salgadinhoMassaForm) {
-        return salgadinhoService.atualizarSalgadinhoMassa(id, salgadinhoMassaForm);
+    public ResponseEntity<SalgadinhoMassaResponse> atualizarSalgadinhoMassa(@PathVariable Long id, @RequestBody @Valid SalgadinhoMassaRegister salgadinhoMassaRegister) {
+        return salgadinhoService.atualizarSalgadinhoMassa(id, salgadinhoMassaRegister);
     }
 
     @DeleteMapping("/massa/{id}")
@@ -70,15 +70,15 @@ public class SalgadinhoController {
 
     @PostMapping("/recheio")
     @Transactional
-    public ResponseEntity<SalgadinhoRecheioResponse> cadastraSalgadinhoRecheio(@RequestBody @Valid SalgadinhoRecheioRegister salgadinhoRecheioForm,
+    public ResponseEntity<SalgadinhoRecheioResponse> cadastraSalgadinhoRecheio(@RequestBody @Valid SalgadinhoRecheioRegister salgadinhoRecheioRegister,
                                                                           UriComponentsBuilder uriBuilder) throws Exception {
-        return salgadinhoService.cadastrarSalgadinhoRecheio(salgadinhoRecheioForm, uriBuilder);
+        return salgadinhoService.cadastrarSalgadinhoRecheio(salgadinhoRecheioRegister, uriBuilder);
     }
 
     @PutMapping("/recheio/{id}")
     @Transactional
-    public ResponseEntity<SalgadinhoRecheioResponse> atualizarSalgadinhoRecheio(@PathVariable Long id, @RequestBody @Valid SalgadinhoRecheioRegister salgadinhoRecheioForm) {
-        return salgadinhoService.atualizarSalgadinhoRecheio(id, salgadinhoRecheioForm);
+    public ResponseEntity<SalgadinhoRecheioResponse> atualizarSalgadinhoRecheio(@PathVariable Long id, @RequestBody @Valid SalgadinhoRecheioRegister salgadinhoRecheioRegister) {
+        return salgadinhoService.atualizarSalgadinhoRecheio(id, salgadinhoRecheioRegister);
     }
 
     @DeleteMapping("/recheio/{id}")
@@ -102,15 +102,15 @@ public class SalgadinhoController {
 
     @PostMapping("/tipoPreparo")
     @Transactional
-    public ResponseEntity<SalgadinhoTipoPreparoResponse> cadastrarSalgadinhoTipoPreparo(@RequestBody @Valid SalgadinhoTipoPreparoRegister salgadinhoTipoPreparoForm,
+    public ResponseEntity<SalgadinhoTipoPreparoResponse> cadastrarSalgadinhoTipoPreparo(@RequestBody @Valid SalgadinhoTipoPreparoRegister salgadinhoTipoPreparoRegister,
                                                                                    UriComponentsBuilder uriBuilder) throws Exception {
-        return salgadinhoService.cadastrarSalgadinhoTipoPreparo(salgadinhoTipoPreparoForm, uriBuilder);
+        return salgadinhoService.cadastrarSalgadinhoTipoPreparo(salgadinhoTipoPreparoRegister, uriBuilder);
     }
 
     @PutMapping("/tipoPreparo/{id}")
     @Transactional
-    public ResponseEntity<SalgadinhoTipoPreparoResponse> atualizarSalgadinhoTipoPreparo(@PathVariable Long id, @RequestBody @Valid SalgadinhoTipoPreparoRegister salgadinhoTipoPreparoForm) {
-        return salgadinhoService.atualizarSalgadinhoTipoPreparo(id, salgadinhoTipoPreparoForm);
+    public ResponseEntity<SalgadinhoTipoPreparoResponse> atualizarSalgadinhoTipoPreparo(@PathVariable Long id, @RequestBody @Valid SalgadinhoTipoPreparoRegister salgadinhoTipoPreparoRegister) {
+        return salgadinhoService.atualizarSalgadinhoTipoPreparo(id, salgadinhoTipoPreparoRegister);
     }
 
     @DeleteMapping("/tipoPreparo/{id}")

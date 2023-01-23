@@ -38,15 +38,15 @@ public class PizzaController {
 
     @PostMapping("/borda")
     @Transactional
-    public ResponseEntity<PizzaBordaResponse> cadastrarPizzaBorda(@RequestBody @Valid PizzaBordaRegister pizzaBordaForm,
+    public ResponseEntity<PizzaBordaResponse> cadastrarPizzaBorda(@RequestBody @Valid PizzaBordaRegister pizzaBordaRegister,
                                                              UriComponentsBuilder uriBuilder) throws Exception {
-        return pizzaService.cadastrarPizzaBorda(pizzaBordaForm, uriBuilder);
+        return pizzaService.cadastrarPizzaBorda(pizzaBordaRegister, uriBuilder);
     }
 
     @PutMapping("/borda/{id}")
     @Transactional
-    public ResponseEntity<PizzaBordaResponse> atualizarPizzaBorda(@PathVariable Long id, @RequestBody @Valid PizzaBordaRegister pizzaBordaForm) {
-        return pizzaService.atualizarLancheTipoPao(id, pizzaBordaForm);
+    public ResponseEntity<PizzaBordaResponse> atualizarPizzaBorda(@PathVariable Long id, @RequestBody @Valid PizzaBordaRegister pizzaBordaRegister) {
+        return pizzaService.atualizarLancheTipoPao(id, pizzaBordaRegister);
     }
 
     @DeleteMapping("/borda/{id}")
@@ -70,15 +70,15 @@ public class PizzaController {
 
     @PostMapping("/molho")
     @Transactional
-    public ResponseEntity<PizzaMolhoReponse> cadastraPizzaMolho(@RequestBody @Valid PizzaMolhoRegister pizzaMolhoForm,
+    public ResponseEntity<PizzaMolhoReponse> cadastraPizzaMolho(@RequestBody @Valid PizzaMolhoRegister pizzaMolhoRegister,
                                                             UriComponentsBuilder uriBuilder) throws Exception {
-        return pizzaService.cadastrarPizzaMolho(pizzaMolhoForm, uriBuilder);
+        return pizzaService.cadastrarPizzaMolho(pizzaMolhoRegister, uriBuilder);
     }
 
     @PutMapping("/molho/{id}")
     @Transactional
-    public ResponseEntity<PizzaMolhoReponse> atualizarPizzaMolho(@PathVariable Long id, @RequestBody @Valid PizzaMolhoRegister pizzaMolhoForm) {
-        return pizzaService.atualizarLancheTipoPao(id, pizzaMolhoForm);
+    public ResponseEntity<PizzaMolhoReponse> atualizarPizzaMolho(@PathVariable Long id, @RequestBody @Valid PizzaMolhoRegister pizzaMolhoRegister) {
+        return pizzaService.atualizarLancheTipoPao(id, pizzaMolhoRegister);
     }
 
     @DeleteMapping("/molho/{id}")
@@ -102,15 +102,15 @@ public class PizzaController {
 
     @PostMapping("/recheio")
     @Transactional
-    public ResponseEntity<PizzaRecheioResponse> cadastrarPizzaRecheio(@RequestBody @Valid PizzaRecheioRegister pizzaRecheioForm,
+    public ResponseEntity<PizzaRecheioResponse> cadastrarPizzaRecheio(@RequestBody @Valid PizzaRecheioRegister pizzaRecheioRegister,
                                                                  UriComponentsBuilder uriBuilder) throws Exception {
-        return pizzaService.cadastrarPizzaRecheio(pizzaRecheioForm, uriBuilder);
+        return pizzaService.cadastrarPizzaRecheio(pizzaRecheioRegister, uriBuilder);
     }
 
     @PutMapping("/recheio/{id}")
     @Transactional
-    public ResponseEntity<PizzaRecheioResponse> atualizarPizzaRecheio(@PathVariable Long id, @RequestBody @Valid PizzaRecheioRegister pizzaRecheioForm) {
-        return pizzaService.atualizarPizzaRecheio(id, pizzaRecheioForm);
+    public ResponseEntity<PizzaRecheioResponse> atualizarPizzaRecheio(@PathVariable Long id, @RequestBody @Valid PizzaRecheioRegister pizzaRecheioRegister) {
+        return pizzaService.atualizarPizzaRecheio(id, pizzaRecheioRegister);
     }
 
     @DeleteMapping("/recheio/{id}")

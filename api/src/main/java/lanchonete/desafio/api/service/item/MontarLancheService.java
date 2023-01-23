@@ -67,13 +67,13 @@ public class MontarLancheService {
 	}
 
 	// post
-	public ResponseEntity<MontarLancheResponse> cadastrarLanche(MontarLancheRegister montarLancheForm,
+	public ResponseEntity<MontarLancheResponse> cadastrarLanche(MontarLancheRegister montarLancheRegister,
 			UriComponentsBuilder uriBuilder) {
 
-		Optional<Pedido> pedidoOptional = pedidoRepository.findById(montarLancheForm.pedidoId());
-		Optional<LancheMolho> lancheMolhoOptional = lancheMolhoRepository.findById(montarLancheForm.lancheMolhoId());
-		Optional<LancheRecheio> lancheRecheioOptional = lancheRecheioRepository.findById(montarLancheForm.lancheRecheioId());
-		Optional<LancheTipoPao> lancheTipoPaoOptional = lancheTipoPaoRepository.findById(montarLancheForm.lancheTipoPaoId());
+		Optional<Pedido> pedidoOptional = pedidoRepository.findById(montarLancheRegister.pedidoId());
+		Optional<LancheMolho> lancheMolhoOptional = lancheMolhoRepository.findById(montarLancheRegister.lancheMolhoId());
+		Optional<LancheRecheio> lancheRecheioOptional = lancheRecheioRepository.findById(montarLancheRegister.lancheRecheioId());
+		Optional<LancheTipoPao> lancheTipoPaoOptional = lancheTipoPaoRepository.findById(montarLancheRegister.lancheTipoPaoId());
 		
 		if (pedidoOptional.isPresent()
 				&& lancheMolhoOptional.isPresent()
@@ -104,13 +104,13 @@ public class MontarLancheService {
 	}
 
 	// put
-	public ResponseEntity<MontarLancheResponse> atualizarLanche(Long lancheId, MontarLancheRegister montarLancheForm) {
+	public ResponseEntity<MontarLancheResponse> atualizarLanche(Long lancheId, MontarLancheRegister montarLancheRegister) {
 
-		Optional<Pedido> pedidoOptional = pedidoRepository.findById(montarLancheForm.pedidoId());
+		Optional<Pedido> pedidoOptional = pedidoRepository.findById(montarLancheRegister.pedidoId());
 		Optional<Lanche> lancheOptional = lancheRepository.findById(lancheId);
-		Optional<LancheMolho> lancheMolhoOptional = lancheMolhoRepository.findById(montarLancheForm.lancheMolhoId());
-		Optional<LancheRecheio> lancheRecheioOptional = lancheRecheioRepository.findById(montarLancheForm.lancheRecheioId());
-		Optional<LancheTipoPao> lancheTipoPaoOptional = lancheTipoPaoRepository.findById(montarLancheForm.lancheTipoPaoId());
+		Optional<LancheMolho> lancheMolhoOptional = lancheMolhoRepository.findById(montarLancheRegister.lancheMolhoId());
+		Optional<LancheRecheio> lancheRecheioOptional = lancheRecheioRepository.findById(montarLancheRegister.lancheRecheioId());
+		Optional<LancheTipoPao> lancheTipoPaoOptional = lancheTipoPaoRepository.findById(montarLancheRegister.lancheTipoPaoId());
 		
 		if (pedidoOptional.isPresent()
 				&& lancheOptional.isPresent()

@@ -89,7 +89,7 @@ public class PizzaService {
 		Optional<PizzaBorda> pizzaBordaOptional = pizzaBordaRepository.findById(id);
 		if (pizzaBordaOptional.isPresent()) {
 			pizzaBordaRepository.deleteById(id);
-			return ResponseEntity.ok().build();
+			return ResponseEntity.noContent().build();
 		}
 		return ResponseEntity.notFound().build();
 	}
@@ -157,7 +157,7 @@ public class PizzaService {
 		Optional<PizzaMolho> lancheMolhoOptional = pizzaMolhoRepository.findById(id);
 		if (lancheMolhoOptional.isPresent()) {
 			pizzaMolhoRepository.deleteById(id);
-			return ResponseEntity.ok().build();
+			return ResponseEntity.noContent().build();
 		}
 		return ResponseEntity.notFound().build();
 	}
@@ -226,7 +226,7 @@ public class PizzaService {
 		Optional<PizzaRecheio> lancheMolhoOptional = pizzaRecheioRepository.findById(id);
 		if (lancheMolhoOptional.isPresent()) {
 			pizzaRecheioRepository.deleteById(id);
-			return ResponseEntity.ok().build();
+			return ResponseEntity.noContent().build();
 		}
 		return ResponseEntity.notFound().build();
 	}

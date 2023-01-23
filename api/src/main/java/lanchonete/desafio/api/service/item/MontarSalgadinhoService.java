@@ -158,7 +158,7 @@ public class MontarSalgadinhoService {
 				
 				pedido.removerSalgadinho(salgadinhoOptional.get()); // operações com os saldos 
 				salgadinhoRepository.delete(salgadinhoOptional.get());
-				return ResponseEntity.ok().build();
+				return ResponseEntity.noContent().build();
 			}
 		}
 		return ResponseEntity.notFound().build();

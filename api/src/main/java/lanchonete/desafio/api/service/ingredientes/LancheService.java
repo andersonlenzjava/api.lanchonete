@@ -93,7 +93,7 @@ public class LancheService {
 			Optional<LancheMolho> lancheMolhoOptional = lancheMolhoRepository.findById(id);
 			if (lancheMolhoOptional.isPresent()) {
 				lancheMolhoRepository.deleteById(id);
-				return ResponseEntity.ok().build();
+				return ResponseEntity.noContent().build();
 			}
 			return ResponseEntity.notFound().build();
 		}
@@ -161,7 +161,7 @@ public class LancheService {
 				Optional<LancheRecheio> lancheRecheioOptional = lancheRecheioRepository.findById(id);
 				if (lancheRecheioOptional.isPresent()) {
 					lancheRecheioRepository.deleteById(id);
-					return ResponseEntity.ok().build();
+					return ResponseEntity.noContent().build();
 				}
 				return ResponseEntity.notFound().build();
 			}
@@ -230,7 +230,7 @@ public class LancheService {
 					Optional<LancheTipoPao> lancheTipoPaoOptional = lancheTipoPaoRepository.findById(id);
 					if (lancheTipoPaoOptional.isPresent()) {
 						lancheTipoPaoRepository.deleteById(id);
-						return ResponseEntity.ok().build();
+						return ResponseEntity.noContent().build();
 					}
 					return ResponseEntity.notFound().build();
 				}

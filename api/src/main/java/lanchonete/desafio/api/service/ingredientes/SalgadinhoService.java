@@ -90,7 +90,7 @@ public class SalgadinhoService {
 		Optional<SalgadinhoMassa> salgadinhoTipoMassaOptional = salgadinhoMassaRepository.findById(id);
 		if (salgadinhoTipoMassaOptional.isPresent()) {
 			salgadinhoMassaRepository.deleteById(id);
-			return ResponseEntity.ok().build();
+			return ResponseEntity.noContent().build();
 		}
 		return ResponseEntity.notFound().build();
 	}
@@ -160,7 +160,7 @@ public class SalgadinhoService {
 		Optional<SalgadinhoRecheio> salgadinhoRecheioOptional = salgadinhoRecheioRepository.findById(id);
 		if (salgadinhoRecheioOptional.isPresent()) {
 			salgadinhoRecheioRepository.deleteById(id);
-			return ResponseEntity.ok().build();
+			return ResponseEntity.noContent().build();
 		}
 		return ResponseEntity.notFound().build();
 	}
@@ -230,7 +230,7 @@ public class SalgadinhoService {
 		Optional<SalgadinhoTipoPreparo> salgadinhoTipoPreparoOptional = salgadinhoTipoPreparoRepository.findById(id);
 		if (salgadinhoTipoPreparoOptional.isPresent()) {
 			salgadinhoTipoPreparoRepository.deleteById(id);
-			return ResponseEntity.ok().build();
+			return ResponseEntity.noContent().build();
 		}
 		return ResponseEntity.notFound().build();
 	}

@@ -158,7 +158,7 @@ public class MontarLancheService {
 				
 				pedido.removerLanche(lancheOptional.get()); // operações com os saldos 
 				lancheRepository.delete(lancheOptional.get());
-				return ResponseEntity.ok().build();
+				return ResponseEntity.noContent().build();
 			}
 		}
 		return ResponseEntity.notFound().build();

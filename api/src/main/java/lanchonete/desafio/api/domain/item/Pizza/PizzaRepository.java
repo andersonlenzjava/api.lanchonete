@@ -25,6 +25,8 @@ public interface PizzaRepository extends JpaRepository<Pizza, Long>  {
     void deletePizzaByPedidoId(@Param("pedidoId") Long pedidoId);
 
     @Query("SELECT u FROM Pizza u WHERE u.pedido.id =:pedidoId ")
-    List<Pizza> findListPizzasPedido(Long pedidoId);
+    Page<Pizza> findListPizzasPedidoPage(Long pedidoId, Pageable paginacao);
 
+    @Query("SELECT u FROM Pizza u WHERE u.pedido.id =:pedidoId ")
+    List<Pizza> findListPizzasPedido(Long pedidoId);
 }

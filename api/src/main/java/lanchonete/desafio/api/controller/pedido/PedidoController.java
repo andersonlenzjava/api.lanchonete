@@ -45,8 +45,9 @@ public class PedidoController {
 	}
 	
 	@GetMapping("/pedidoCompleto/porId/{pedidoId}")
-	public ResponseEntity<PedidoCompletoResponse> listarPedidoCompletoPorId(@PathVariable Long pedidoId) {
-		return pedidoService.listarPedidoCompletoPorId(pedidoId);
+	public ResponseEntity<PedidoCompletoResponse> listarPedidoCompletoPorId(@PathVariable Long pedidoId,
+																			@PageableDefault(sort = "id", direction = Direction.ASC, page = 0, size = 10) Pageable paginacao) {
+		return pedidoService.listarPedidoCompletoPorId(pedidoId, paginacao);
 	}
 	
 	@GetMapping("/abertos")

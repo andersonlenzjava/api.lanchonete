@@ -3,10 +3,6 @@ package lanchonete.desafio.api.domain.item.Lanche;
 import lanchonete.desafio.api.domain.ingrediente.LancheMolho.LancheMolho;
 import lanchonete.desafio.api.domain.ingrediente.LancheRecheio.LancheRecheio;
 import lanchonete.desafio.api.domain.ingrediente.LancheTipoPao.LancheTipoPao;
-import lanchonete.desafio.api.domain.ingrediente.SalgadinhoTipoPreparo.SalgadinhoTipoPreparo;
-import lanchonete.desafio.api.domain.ingrediente.SalgadinhoTipoPreparo.SalgadinhoTipoPreparoResponse;
-import lanchonete.desafio.api.domain.item.item.Item;
-import lanchonete.desafio.api.domain.pedido.Pedido.Pedido;
 import org.springframework.data.domain.Page;
 
 import java.math.BigDecimal;

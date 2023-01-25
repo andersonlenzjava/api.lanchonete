@@ -25,6 +25,8 @@ public interface SalgadinhoRepository extends JpaRepository<Salgadinho, Long> {
     void deleteSalgadinhoByPedidoId(@Param("pedidoId") Long pedidoId);
 
     @Query("SELECT u FROM Salgadinho u WHERE u.pedido.id = :pedidoId ")
-    List<Salgadinho> findListSalgadinhosPedido(Long pedidoId);
+    Page<Salgadinho> findListSalgadinhosPedidoPage(Long pedidoId, Pageable paginacao);
 
+    @Query("SELECT u FROM Salgadinho u WHERE u.pedido.id = :pedidoId ")
+    List<Salgadinho> findListSalgadinhosPedido(Long pedidoId);
 }

@@ -25,6 +25,8 @@ public interface LancheRepository extends JpaRepository<Lanche, Long> {
     void deleteLancheByPedidoId(@Param("pedidoId") Long pedidoId);
 
     @Query("SELECT u FROM Lanche u WHERE u.pedido.id = :pedidoId ")
-    List<Lanche> findListLanchesPedido(Long pedidoId);
+    Page<Lanche> findListLanchesPedidoPage(Long pedidoId, Pageable paginacao);
 
+    @Query("SELECT u FROM Lanche u WHERE u.pedido.id = :pedidoId ")
+    List<Lanche> findListLanchesPedido(Long pedidoId);
 }

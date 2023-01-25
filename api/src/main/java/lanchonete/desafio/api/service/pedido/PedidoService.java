@@ -54,13 +54,13 @@ public class PedidoService {
 	} 
 	
 	//get por id completo
-	public ResponseEntity<PedidoCompletoResponse> listarPedidoCompletoPorId(Long pedidoId) {
+	public ResponseEntity<PedidoCompletoResponse> listarPedidoCompletoPorId(Long pedidoId, Pageable paginacao) {
 		Optional<Pedido> pedidoOptional = pedidoRepository.findById(pedidoId);
 		if (pedidoOptional.isPresent()) {
 			
-			List<Lanche> findListLanchesPedido = lancheRepository.findListLanchesPedido(pedidoId);
-			List<Pizza> findListPizzasPedido = pizzaRepository.findListPizzasPedido(pedidoId);
-			List<Salgadinho> findListSalgadinhosPedido = salgadinhoRepository.findListSalgadinhosPedido(pedidoId);
+			Page<Lanche> findListLanchesPedido = lancheRepository.findListLanchesPedidoPage(pedidoId, paginacao);
+			Page<Pizza> findListPizzasPedido = pizzaRepository.findListPizzasPedidoPage(pedidoId, paginacao);
+			Page<Salgadinho> findListSalgadinhosPedido = salgadinhoRepository.findListSalgadinhosPedidoPage(pedidoId, paginacao);
 			
 			return ResponseEntity.ok(PedidoCompletoResponse.converterUmPedido(
 					pedidoOptional.get(),

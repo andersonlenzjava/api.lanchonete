@@ -9,88 +9,33 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PedidoCompletoResponse {
-
-    private Long pedidoId;
-    private String nomeCliente;
-    private StatusPedido statusPedido = StatusPedido.ABERTO;
-    private BigDecimal valorTotalServico = BigDecimal.ZERO;
-    private BigDecimal valorPago = BigDecimal.ZERO;
-    private BigDecimal troco = BigDecimal.ZERO;
-    private List<Lanche> listaLanche = new ArrayList<>();
-    private List<Pizza> listaPizza = new ArrayList<>();
-    private List<Salgadinho> listaSalgadinho = new ArrayList<>();
-
+public record PedidoCompletoResponse (
+        Long pedidoId,
+        String nomeCliente,
+        StatusPedido statusPedido,
+        BigDecimal valorTotalServico,
+        BigDecimal valorPago,
+        BigDecimal troco,
+        List<Lanche> listaLanche,
+        List<Pizza> listaPizza,
+        List<Salgadinho> listaSalgadinho) {
 
     public PedidoCompletoResponse(
             Pedido pedido,
             List<Lanche> lanches,
             List<Pizza> pizzas,
             List<Salgadinho> salgadinhos) {
-        this.pedidoId = pedido.getId();
-        this.listaLanche = lanches;
-        this.listaPizza = pizzas;
-        this.listaSalgadinho = salgadinhos;
-        this.nomeCliente = pedido.getNomeCliente();
-        this.valorTotalServico = pedido.getValorTotalServico();
-        this.valorPago = pedido.getValorPago();
-        this.troco = pedido.getTroco();
-        this.statusPedido = pedido.getStatusPedido();
-    }
-
-    public Long getPedidoId() {
-        return pedidoId;
-    }
-    public void setId(Long pedidoId) {
-        this.pedidoId = pedidoId;
-    }
-    public List<Lanche> getListaLanche() {
-        return listaLanche;
-    }
-    public void setListaLanche(List<Lanche> listaLanche) {
-        this.listaLanche = listaLanche;
-    }
-    public List<Pizza> getListaPizza() {
-        return listaPizza;
-    }
-    public void setListaPizza(List<Pizza> listaPizza) {
-        this.listaPizza = listaPizza;
-    }
-    public List<Salgadinho> getListaSalgadinho() {
-        return listaSalgadinho;
-    }
-    public void setListaSalgadinho(List<Salgadinho> listaSalgadinho) {
-        this.listaSalgadinho = listaSalgadinho;
-    }
-    public String getNomeCliente() {
-        return nomeCliente;
-    }
-    public void setNomeCliente(String nomeCliente) {
-        this.nomeCliente = nomeCliente;
-    }
-    public BigDecimal getValorTotalServico() {
-        return valorTotalServico;
-    }
-    public void setValorTotalServico(BigDecimal valorTotalServico) {
-        this.valorTotalServico = valorTotalServico;
-    }
-    public BigDecimal getValorPago() {
-        return valorPago;
-    }
-    public void setValorPago(BigDecimal valorPago) {
-        this.valorPago = valorPago;
-    }
-    public BigDecimal getTroco() {
-        return troco;
-    }
-    public void setTroco(BigDecimal troco) {
-        this.troco = troco;
-    }
-    public StatusPedido getStatusPedido() {
-        return statusPedido;
-    }
-    public void setStatusPedido(StatusPedido statusPedido) {
-        this.statusPedido = statusPedido;
+        this(
+                pedido.getId(),
+                pedido.getNomeCliente(),
+                pedido.getStatusPedido(),
+                pedido.getValorTotalServico(),
+                pedido.getValorPago(),
+                pedido.getTroco(),
+                lanches,
+                pizzas,
+                salgadinhos
+                );
     }
 
     public static PedidoCompletoResponse converterUmPedido(

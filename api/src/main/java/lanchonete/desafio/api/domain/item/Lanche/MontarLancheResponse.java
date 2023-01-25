@@ -9,18 +9,25 @@ import lanchonete.desafio.api.domain.item.item.Item;
 import lanchonete.desafio.api.domain.pedido.Pedido.Pedido;
 import org.springframework.data.domain.Page;
 
+import java.math.BigDecimal;
+import java.time.LocalDate;
+
 public record MontarLancheResponse (
         Long id,
-        Item item,
-        Pedido pedido,
+        BigDecimal totalItem,
+        LocalDate dataValidade,
+        Double pesoItem,
+        Long pedidoId,
         LancheTipoPao lancheTipoPao,
         LancheRecheio lancheRecheio,
         LancheMolho lancheMolho) {
 
     public MontarLancheResponse (Lanche lanche) {
-        this (lanche.getId(),
-                lanche.getItem(),
-                lanche.getPedido(),
+        this (  lanche.getId(),
+                lanche.getItem().getTotalItem(),
+                lanche.getItem().getDataValidade(),
+                lanche.getItem().getPesoItem(),
+                lanche.getPedido().getId(),
                 lanche.getLancheTipoPao(),
                 lanche.getLancheRecheio(),
                 lanche.getLancheMolho());

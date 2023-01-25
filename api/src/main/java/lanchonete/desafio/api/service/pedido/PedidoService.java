@@ -62,8 +62,11 @@ public class PedidoService {
 			List<Pizza> findListPizzasPedido = pizzaRepository.findListPizzasPedido(pedidoId);
 			List<Salgadinho> findListSalgadinhosPedido = salgadinhoRepository.findListSalgadinhosPedido(pedidoId);
 			
-			return ResponseEntity.ok(PedidoCompletoResponse.converterUmPedido(pedidoOptional.get(), findListLanchesPedido,
-					findListPizzasPedido, findListSalgadinhosPedido));
+			return ResponseEntity.ok(PedidoCompletoResponse.converterUmPedido(
+					pedidoOptional.get(),
+					findListLanchesPedido,
+					findListPizzasPedido,
+					findListSalgadinhosPedido));
 		}
 		return ResponseEntity.notFound().build();
 	}

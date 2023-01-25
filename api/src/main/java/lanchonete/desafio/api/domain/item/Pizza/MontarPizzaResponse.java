@@ -9,18 +9,25 @@ import lanchonete.desafio.api.domain.item.item.Item;
 import lanchonete.desafio.api.domain.pedido.Pedido.Pedido;
 import org.springframework.data.domain.Page;
 
+import java.math.BigDecimal;
+import java.time.LocalDate;
+
 public record MontarPizzaResponse (
         Long id,
-        Item item,
-        Pedido pedido,
+        BigDecimal totalItem,
+        LocalDate dataValidade,
+        Double pesoItem,
+        Long pedidoId,
         PizzaBorda pizzaBorda,
         PizzaMolho pizzaMolho,
         PizzaRecheio pizzaRecheio) {
 
     public MontarPizzaResponse (Pizza pizza) {
-        this (pizza.getId(),
-                pizza.getItem(),
-                pizza.getPedido(),
+        this (  pizza.getId(),
+                pizza.getItem().getTotalItem(),
+                pizza.getItem().getDataValidade(),
+                pizza.getItem().getPesoItem(),
+                pizza.getPedido().getId(),
                 pizza.getPizzaBorda(),
                 pizza.getPizzaMolho(),
                 pizza.getPizzaRecheio());

@@ -9,18 +9,25 @@ import lanchonete.desafio.api.domain.item.item.Item;
 import lanchonete.desafio.api.domain.pedido.Pedido.Pedido;
 import org.springframework.data.domain.Page;
 
+import java.math.BigDecimal;
+import java.time.LocalDate;
+
 public record MontarSalgadinhoResponse (
         Long id,
-        Item item,
-        Pedido pedido,
+        BigDecimal totalItem,
+        LocalDate dataValidade,
+        Double pesoItem,
+        Long pedidoId,
         SalgadinhoMassa salgadinhoMassa,
         SalgadinhoRecheio salgadinhoRecheio,
         SalgadinhoTipoPreparo salgadinhoTipoPreparo) {
 
     public MontarSalgadinhoResponse (Salgadinho salgadinho) {
-        this (salgadinho.getId(),
-                salgadinho.getItem(),
-                salgadinho.getPedido(),
+        this (  salgadinho.getId(),
+                salgadinho.getItem().getTotalItem(),
+                salgadinho.getItem().getDataValidade(),
+                salgadinho.getItem().getPesoItem(),
+                salgadinho.getPedido().getId(),
                 salgadinho.getSalgadinhoMassa(),
                 salgadinho.getSalgadinhoRecheio(),
                 salgadinho.getSalgadinhoTipoPreparo());

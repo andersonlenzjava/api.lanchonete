@@ -11,17 +11,22 @@ import java.util.List;
 
 public class PedidoCompletoResponse {
 
-    Long pedidoId;
-    private List<Lanche> listaLanche = new ArrayList<>();
-    private List<Pizza> listaPizza = new ArrayList<>();
-    private List<Salgadinho> listaSalgadinho = new ArrayList<>();
+    private Long pedidoId;
     private String nomeCliente;
+    private StatusPedido statusPedido = StatusPedido.ABERTO;
     private BigDecimal valorTotalServico = BigDecimal.ZERO;
     private BigDecimal valorPago = BigDecimal.ZERO;
     private BigDecimal troco = BigDecimal.ZERO;
-    private StatusPedido statusPedido = StatusPedido.ABERTO;
+    private List<Lanche> listaLanche = new ArrayList<>();
+    private List<Pizza> listaPizza = new ArrayList<>();
+    private List<Salgadinho> listaSalgadinho = new ArrayList<>();
 
-    public PedidoCompletoResponse(Pedido pedido, List<Lanche> lanches, List<Pizza> pizzas, List<Salgadinho> salgadinhos) {
+
+    public PedidoCompletoResponse(
+            Pedido pedido,
+            List<Lanche> lanches,
+            List<Pizza> pizzas,
+            List<Salgadinho> salgadinhos) {
         this.pedidoId = pedido.getId();
         this.listaLanche = lanches;
         this.listaPizza = pizzas;
@@ -88,7 +93,11 @@ public class PedidoCompletoResponse {
         this.statusPedido = statusPedido;
     }
 
-    public static PedidoCompletoResponse converterUmPedido(Pedido pedido, List<Lanche> listaLanche, List<Pizza> listaPizza, List<Salgadinho> listaSalgadinho) {
+    public static PedidoCompletoResponse converterUmPedido(
+            Pedido pedido,
+            List<Lanche> listaLanche,
+            List<Pizza> listaPizza,
+            List<Salgadinho> listaSalgadinho) {
         return new PedidoCompletoResponse(pedido, listaLanche, listaPizza, listaSalgadinho);
     }
 }

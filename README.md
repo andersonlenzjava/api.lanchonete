@@ -7,3 +7,5 @@ Os requisitos do cliente são apresentados no desafio de programação orientada
 </p>
 
 <h2>Índice</h2>
+
+<h2>✔️Técnicas e Tecnologias utilizadas </h2>

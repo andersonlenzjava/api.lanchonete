@@ -7,6 +7,7 @@ import jakarta.validation.Valid;
 import lanchonete.desafio.api.domain.pedido.Pedido.PedidoCompletoRegister;
 import lanchonete.desafio.api.domain.pedido.Pedido.PedidoCompletoResponse;
 import lanchonete.desafio.api.domain.pedido.Pedido.PedidoResponse;
+import lanchonete.desafio.api.infra.exeption.PedidoVazioException;
 import lanchonete.desafio.api.infra.exeption.ValorPagoInsuficienteException;
 import lanchonete.desafio.api.service.pedido.PedidoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -84,7 +85,7 @@ public class PedidoController {
 
 	@PutMapping("/atribuiProcessando/{pedidoId}")
 	@Transactional
-	public ResponseEntity<PedidoResponse> AtribuiProcessandoPedido(@PathVariable(required = true) Long pedidoId, UriComponentsBuilder uriBuilder) {
+	public ResponseEntity<PedidoResponse> AtribuiProcessandoPedido(@PathVariable(required = true) Long pedidoId, UriComponentsBuilder uriBuilder) throws PedidoVazioException {
 		return pedidoService.atribuiProcessando(pedidoId, uriBuilder);
 	}
 	

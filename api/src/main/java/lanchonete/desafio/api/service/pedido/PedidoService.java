@@ -13,6 +13,7 @@ import lanchonete.desafio.api.domain.item.Salgadinho.Salgadinho;
 import lanchonete.desafio.api.domain.item.Salgadinho.SalgadinhoRepository;
 import lanchonete.desafio.api.domain.pedido.Pedido.*;
 import lanchonete.desafio.api.domain.pedido.StatusPedido.StatusPedido;
+import lanchonete.desafio.api.infra.exeption.PedidoVazioException;
 import lanchonete.desafio.api.infra.exeption.ValorPagoInsuficienteException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -112,7 +113,7 @@ public class PedidoService {
 		if (pedidoOptional.isPresent()) {
 			
 			Pedido pedido = pedidoOptional.get();
-			if (pedido.getStatusPedido() != StatusPedido.PAGOFINALIZADO) {
+			if ((pedido.getStatusPedido() != StatusPedido.PAGOFINALIZADO) && (pedido.getStatusPedido() != StatusPedido.PROCESSANDO)) {
 
 				pedido.setNomeCliente(pedidoCompletoRegister.nomeCliente());
 				pedidoRepository.save(pedido);
@@ -125,12 +126,20 @@ public class PedidoService {
 	}
 
 	// atribui processando
-	public ResponseEntity<PedidoResponse> atribuiProcessando(Long pedidoId, UriComponentsBuilder uriBuilder) {
+	public ResponseEntity<PedidoResponse> atribuiProcessando(Long pedidoId, UriComponentsBuilder uriBuilder) throws PedidoVazioException {
 		Optional<Pedido> pedidoOptional = pedidoRepository.findById(pedidoId);
 		if (pedidoOptional.isPresent()) {
 
 			Pedido pedido = pedidoOptional.get();
 			if (pedido.getStatusPedido() != StatusPedido.PAGOFINALIZADO) {
+
+				List<Lanche> lancheOptional = lancheRepository.findListLanchesPedido(pedidoId);
+				List<Pizza> pizzaOptional = pizzaRepository.findListPizzasPedido(pedidoId);
+				List<Salgadinho> salgadinhoOptional = salgadinhoRepository.findListSalgadinhosPedido(pedidoId);
+
+				if ((lancheOptional.isEmpty()) && (pizzaOptional.isEmpty()) && (salgadinhoOptional.isEmpty())) {
+					throw new PedidoVazioException("O pedido não pode estar vazio");
+				}
 
 				pedido.setStatusPedido(StatusPedido.PROCESSANDO);
 				pedidoRepository.save(pedido);

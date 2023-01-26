@@ -35,6 +35,12 @@ public class TratadorDeErros {
         return ResponseEntity.badRequest().body(erros);
     }
 
+    @ExceptionHandler(PedidoVazioException.class)
+    public ResponseEntity tratarError400(PedidoVazioException ex){
+        var erros = ex.getMessage();
+        return ResponseEntity.badRequest().body(erros);
+    }
+
     // pega a minha exception e joga no corpo da requisição este erro
     @ExceptionHandler(ValorPagoInsuficienteException.class)
     public ResponseEntity tratarError400(ValorPagoInsuficienteException ex){

@@ -8,31 +8,31 @@ Os requisitos do cliente são apresentados no desafio de programação orientada
 
 ## Índice
 
-<p><a href="#API-Sistema-de-Lanchonete">API Sistema de Lanchonete</a></p>
-<p><a href="#Introdução">Introdução</a></p>
-<p><a href="#%EF%B8%8Ftécnicas-e-tecnologias-utilizadas">Técnicas e Tecnologias utilizadas</a></p>
-<p><a href="#Funcionalidades">Funcionalidades</a></p>
-<p><a href="#Requisitos-gerais-apresentado-pelo-cliente">Requisitos gerais apresentado pelo cliente</a></p>
-<p><a href="#Funcionalidades-estabelecidas-para-atender-a-demanda-do-cliente">Funcionalidades estabelecidas para atender a demanda do cliente</a></p>
-<p><a href="#Etapas">Etapas</a></p>
-<p><a href="#status-6265">Status: 61/65</a></p>
-<p><a href="#Como-utilizar">Como utilizar</a></p>
-<p><a href="#Um-melhor-detalhamento-do-uso-desta-API-é-apresentado-no-video-deste-link">VÍDEO do projeto</a></p>
-<p><a href="#Considerações">Considerações</a></p>
+<a href="#API-Sistema-de-Lanchonete">API Sistema de Lanchonete</a></br>
+<a href="#Introdução">Introdução</a></br>
+<a href="#%EF%B8%8Ftécnicas-e-tecnologias-utilizadas">Técnicas e Tecnologias utilizadas</a></br>
+<a href="#Funcionalidades">Funcionalidades</a></br>
+<a href="#Requisitos-gerais-apresentado-pelo-cliente">Requisitos gerais apresentado pelo cliente</a></br>
+<a href="#Funcionalidades-estabelecidas-para-atender-a-demanda-do-cliente">Funcionalidades estabelecidas para atender a demanda do cliente</a></br>
+<a href="#Etapas">Etapas</a></br>
+<a href="#status-6265">Status: 61/65</a></br>
+<a href="#Como-utilizar">Como utilizar</a></br>
+<a href="#Um-melhor-detalhamento-do-uso-desta-API-é-apresentado-no-video-deste-link">VÍDEO do projeto</a></br>
+<a href="#Considerações">Considerações</a></br>
 
 ## ✔️Técnicas e Tecnologias utilizadas
 
-* <p> Java </p> 
-* <p>  Spring Framework</p> 
-* <p> Spring Boot </p> 
-* <p> Spring Boot Validation</p> 
-* <p> Spring Data JPA</p> 
-* <p> Maven</p> 
-* <p> Lombok</p> 
-* <p> Flyway</p> 
-* <p> PostgresSQL</p> 
-* <p> Postman </p> 
-* <p> Programação Orientada a Objetos</p> 
+*  Java </br> 
+*   Spring Framework</br> 
+*  Spring Boot </br>
+*  Spring Boot Validation</br>
+*  Spring Data JPA</br> 
+*  Maven</br>
+*  Lombok</br> 
+*  Flyway</br>
+*  PostgresSQL</br> 
+*  Postman </br> 
+*  Programação Orientada a Objetos</br> 
 
 ## 📃Funcionalidades
 
@@ -61,6 +61,9 @@ Para o seu cliente, é imprescindível que o sistema tenha algumas funções. </
 ## Etapas:
 
 - [x] Modelagem do diagrama de entidades e suas relações
+
+<img src="https://github.com/andersonlenzjava/api.lanchonete/blob/master/api/src/main/resources/Diagrama_uml_lanchonete.jpg?raw=truehttps://github.com/andersonlenzjava/api.lanchonete/blob/master/api/src/main/resources/Diagrama_uml_lanchonete.jpg?raw=true"/>
+
  - [x] domain da API com:
    - [x] Ingredientes
   
@@ -90,10 +93,10 @@ Para o seu cliente, é imprescindível que o sistema tenha algumas funções. </
        - [x] StatusPedido
 
 <p>Para cada uma das entidades itens da API foi implementado os seguintes componentes:</p>
-        <p>Implementação da entidade</p>
-        <p>Implementação do Repository</p>
-        <p>Implementação do DTO Response</p>
-        <p>Implementação do DTO Register</p>
+        Implementação da entidade</br>
+        Implementação do Repository</br>
+        Implementação do DTO Response</br>
+        Implementação do DTO Register</br>
 
 - [x] controller 
 
@@ -121,15 +124,15 @@ Para o seu cliente, é imprescindível que o sistema tenha algumas funções. </
 
 <p>Para cada um dos controllers de ingredientes e item foram implementadas os seguintes endpoints para as requisições HTTP compondo  CRUD:</p>
 <p>Ex: Para o molho do lanche:</p>
-<p>@RequestMapping("/ingrediente/lanches")  => Endereço URL básico:</p>
-<p>@GetMapping("/molho") => Listar todos os molhos (com paginação).</p>
-<p>@GetMapping("/molho/{id}") => Listar um molho especifico por seu id.</p>
-<p>@PostMapping("/molho") => Cadastrar um molho com um JSON.</p>
-<p>@PutMapping("/molho/{id}") => Atualizar um molho pelo id e com um JSON.</p>
-<p>@DeleteMapping("/molho/{id}") => Deletar um molho por um id. </p>
+@RequestMapping("/ingrediente/lanches")  => Endereço URL básico:</br>
+@GetMapping("/molho") => Listar todos os molhos (com paginação).</br>
+@GetMapping("/molho/{id}") => Listar um molho especifico por seu id.</br>
+@PostMapping("/molho") => Cadastrar um molho com um JSON.</br>
+@PutMapping("/molho/{id}") => Atualizar um molho pelo id e com um JSON.</br>
+@DeleteMapping("/molho/{id}") => Deletar um molho por um id. </br>
+</br>
 
 - [x] services 
-
 <p>Para cada um dos endpoints das controllers foram montados métodos dentro das services para acessar o banco de dados através dos Repositorys, e juntamente com os métodos das entidades, completar o CRUD e regras de negócio. </p>  
 
 - [x] ingredientes
@@ -160,25 +163,25 @@ Para o seu cliente, é imprescindível que o sistema tenha algumas funções. </
 
    <p>Neste momento para utilizar o sistema é necessário rodar o sistema offline dentro de alguma IDE, através do Spring Boot.</p>
    <p><strong>Etapas:</strong></p>
-     <p>Download do projeto e descompactar </p>
-     <p>Fazer a atualização das dependências com o Maven</p>
-     <p>Fazer a configuração do banco de dados de sua preferência</p>
-     <p>Criar o banco de dados </p>
-     <p>Configurar a API a este banco de dados</p>
-     <p>Rodar o projeto com a app.properties em spring.jpa.hibernate.ddl-auto=create</p>
-     <p>Em seguida colocar spring.jpa.hibernate.ddl-auto=none</p>
-     <p>Abrir a collection de endpoints com o software que gerencia requisições PostMan</p>
+     Download do projeto e descompactar </br>
+     Fazer a atualização das dependências com o Maven</br>
+     Fazer a configuração do banco de dados de sua preferência</br>
+     Criar o banco de dados </br>
+     Configurar a API a este banco de dados</br>
+     Rodar o projeto com a app.properties em spring.jpa.hibernate.ddl-auto=create</br>
+     Em seguida colocar spring.jpa.hibernate.ddl-auto=none</br>
+     Abrir a collection de endpoints com o software que gerencia requisições PostMan</br>
 
 #### Na operacionalização do sistema obedecer a seguinte sequência:
 
-   <p>Cadastrar todos os ingredientes conforme os exemplos em JSON apresentados na collection de endpoints.</p>
-   <p>Fazer a abertura de um novo pedido. </p>
-   <p>Com o id do pedido e dos ingredientes, criar os itens deste pedido podendo ser:</p>
-   <p>Lanche, Pizza ou Salgadinho. </p>
-   <p>Mudar para status processando. </p>
-   <p>E após o pedido estar pronto, realizar o pagamento através do endpoint RetornaCalculoTrocoPedido.</p>
+   Cadastrar todos os ingredientes conforme os exemplos em JSON apresentados na collection de endpoints.</br>
+   Fazer a abertura de um novo pedido. </br>
+   Com o id do pedido e dos ingredientes, criar os itens deste pedido podendo ser:</br>
+   Lanche, Pizza ou Salgadinho. </br>
+   Mudar para status processando. </br>
+   E após o pedido estar pronto, realizar o pagamento através do endpoint RetornaCalculoTrocoPedido.</br>
 
-#### Um melhor detalhamento do uso desta API é apresentado no video deste link.
+## Um melhor detalhamento do uso desta API é apresentado no video deste link.
 
 ## Considerações:
 

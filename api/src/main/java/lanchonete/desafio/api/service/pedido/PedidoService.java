@@ -141,7 +141,6 @@ public class PedidoService {
 		Optional<Pedido> pedidoOptional = pedidoRepository.findById(pedidoId);
 		if (pedidoOptional.isPresent()) {
 			// primeiro tem de verificar se tem lanche para poder deletar 
-			
 
 			List<Lanche> lancheOptional = lancheRepository.findListLanchesPedido(pedidoId);
 			List<Pizza> pizzaOptional = pizzaRepository.findListPizzasPedido(pedidoId);

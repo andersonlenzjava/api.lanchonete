@@ -37,7 +37,7 @@ Os requisitos do cliente são apresentados no desafio de programação orientada
 
 ## 📃Funcionalidades
 
-<h3>Requisitos gerais apresentado pelo cliente:</h3>
+### Requisitos gerais apresentado pelo cliente:
 <p>A lanchonete possui 3 principais itens de venda: pizzas, lanches e salgadinhos. Inicialmente, o sistema será testado para controlar as vendas desses 3 itens apenas. 
  Todos os itens vendidos devem conter: preço de venda, data de validade e peso. 
 O sistema da nossa lanchonete deverá criar um pedido, esse pedido será composto pelo nome do cliente, itens que foram consumidos e taxa de serviço. 
@@ -49,7 +49,7 @@ Para o seu cliente, é imprescindível que o sistema tenha algumas funções. </
  “Os pedidos de lanches precisam conter algumas informações essenciais, são elas: tipo do pão, recheio e molhos obrigatoriamente.”   </br>
  “Os salgadinhos possuem grande saída, queremos controlar sua venda. Gostaríamos que os pedidos contivessem: o tipo (frito ou assado), massa e recheio.”  </p>
 
-<h3>Funcionalidades estabelecidas para atender a demanda do cliente:</h3>
+### Funcionalidades estabelecidas para atender a demanda do cliente:
 
 <ol>
 <li>  Cadastro dos ingredientes com os seguintes atributos: precoVenda, dataValidade, peso, nomeIgrediente.</li>
@@ -58,7 +58,7 @@ Para o seu cliente, é imprescindível que o sistema tenha algumas funções. </
 <li>  Após fechar a montagem dos itens do pedido, este assume o status de PROCESSANDO, no momento do pagamento é possível informar o valor pago, e se este for maior que o valor total do pedido, este assume o status de PAGOFINALIZADO. Caso seja menor ele retorna uma mensagem que o valor é insuficiente. </li>
 </ol>
 
-<h2>Etapas:</h2>
+## Etapas:
 
 - [x] Modelagem do diagrama de entidades e suas relações
  - [x] domain da API com:
@@ -152,11 +152,11 @@ Para o seu cliente, é imprescindível que o sistema tenha algumas funções. </
 - [ ] deploy no heroku 
 
 
-<h2>Status 61 / 65</h2>
+## Status 61 / 65
 
- <h3>Como utilizar:</h3> 
+ ### Como utilizar:
    
-   <h4>Carregamento do projeto</h4>
+   #### Carregamento do projeto
       <p>Neste momento para utilizar o sistema é necessário rodar o sistema offline dentro de alguma IDE, através do Spring Boot.</p>
       <p><strong>Etapas:</strong></p>
         <p>Download do projeto e descompactar </p>
@@ -168,7 +168,7 @@ Para o seu cliente, é imprescindível que o sistema tenha algumas funções. </
         <p>Em seguida colocar spring.jpa.hibernate.ddl-auto=none</p>
         <p>Abrir a collection de endpoints com o software que gerencia requisições PostMan</p>
 
-   <h4>Na operacionalização do sistema obedecer a seguinte sequência:</h4>
+   #### Na operacionalização do sistema obedecer a seguinte sequência:
       <p>Cadastrar todos os ingredientes conforme os exemplos em JSON apresentados na collection de endpoints.</p>
       <p>Fazer a abertura de um novo pedido. </p>
       <p>Com o id do pedido e dos ingredientes, criar os itens deste pedido podendo ser:</p>
@@ -176,7 +176,7 @@ Para o seu cliente, é imprescindível que o sistema tenha algumas funções. </
       <p>Mudar para status processando. </p>
       <p>E após o pedido estar pronto, realizar o pagamento através do endpoint RetornaCalculoTrocoPedido.</p>
 
-   <h4>Um melhor detalhamento do uso desta API é apresentado no video deste link. </h4>
+   #### Um melhor detalhamento do uso desta API é apresentado no video deste link. 
 
-<h2>Considerações:</h2> 
+## Considerações:
  <p>Neste sistema foi possível implementar o CRUD dos ingredientes, dos items e dos pedidos, bem como as regras de negócio estabelecidas pelos requisitos do cliente. </p>

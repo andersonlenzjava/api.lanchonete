@@ -117,7 +117,26 @@ public class PedidoService {
 				pedido.setNomeCliente(pedidoCompletoRegister.nomeCliente());
 				pedidoRepository.save(pedido);
 
-				return ResponseEntity.ok(new PedidoResponse(pedido));
+				URI uri = uriBuilder.path("/pedido/{id}").buildAndExpand(pedido.getId()).toUri();
+				return ResponseEntity.created(uri).body(new PedidoResponse(pedido));
+			}
+		}
+		return ResponseEntity.notFound().build();
+	}
+
+	// atribui processando
+	public ResponseEntity<PedidoResponse> atribuiProcessando(Long pedidoId, UriComponentsBuilder uriBuilder) {
+		Optional<Pedido> pedidoOptional = pedidoRepository.findById(pedidoId);
+		if (pedidoOptional.isPresent()) {
+
+			Pedido pedido = pedidoOptional.get();
+			if (pedido.getStatusPedido() != StatusPedido.PAGOFINALIZADO) {
+
+				pedido.setStatusPedido(StatusPedido.PROCESSANDO);
+				pedidoRepository.save(pedido);
+
+				URI uri = uriBuilder.path("/pedido/{id}").buildAndExpand(pedido.getId()).toUri();
+				return ResponseEntity.created(uri).body(new PedidoResponse(pedido));
 			}
 		}
 		return ResponseEntity.notFound().build();

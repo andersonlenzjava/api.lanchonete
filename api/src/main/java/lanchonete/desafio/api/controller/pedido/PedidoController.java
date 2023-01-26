@@ -81,6 +81,12 @@ public class PedidoController {
 			UriComponentsBuilder uriBuilder) {
 		return pedidoService.atualizarPedido(pedidoId, pedidoForm, uriBuilder);
 	}
+
+	@PutMapping("/atribuiProcessando/{pedidoId}")
+	@Transactional
+	public ResponseEntity<PedidoResponse> AtribuiProcessandoPedido(@PathVariable(required = true) Long pedidoId, UriComponentsBuilder uriBuilder) {
+		return pedidoService.atribuiProcessando(pedidoId, uriBuilder);
+	}
 	
 	@GetMapping("/calculaTroco/{pedidoId}")
 	@Transactional

@@ -62,7 +62,7 @@ Para o seu cliente, é imprescindível que o sistema tenha algumas funções. </
 
 - [x] Modelagem do diagrama de entidades e suas relações
 
-<img src="https://github.com/andersonlenzjava/api.lanchonete/blob/master/api/src/main/resources/Diagrama_uml_lanchonete.jpg?raw=true"/>
+<img src="https://github.com/andersonlenzjava/api.lanchonete/blob/master/api/src/main/resources/Diagrama_UML_API_Lanchonete.jpg?raw=true"/>
 
  - [x] domain da API com:
    - [x] Ingredientes

@@ -124,7 +124,6 @@ Para o seu cliente, é imprescindível que o sistema tenha algumas funções. </
 
 <p>Para cada um dos controllers de ingredientes e item foram implementadas os seguintes endpoints para as requisições HTTP compondo  CRUD:</p>
 <p>Ex: Para o molho do lanche:</p>
-</br>
 @RequestMapping("/ingrediente/lanches")  => Endereço URL básico:</br>
 @GetMapping("/molho") => Listar todos os molhos (com paginação).</br>
 @GetMapping("/molho/{id}") => Listar um molho especifico por seu id.</br>

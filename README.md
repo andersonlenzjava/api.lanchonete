@@ -131,9 +131,9 @@ Para o seu cliente, é imprescindível que o sistema tenha algumas funções. </
 @PostMapping("/molho") => Cadastrar um molho com um JSON.</br>
 @PutMapping("/molho/{id}") => Atualizar um molho pelo id e com um JSON.</br>
 @DeleteMapping("/molho/{id}") => Deletar um molho por um id. </br>
+</br>
 
 - [x] services 
-
 <p>Para cada um dos endpoints das controllers foram montados métodos dentro das services para acessar o banco de dados através dos Repositorys, e juntamente com os métodos das entidades, completar o CRUD e regras de negócio. </p>  
 
 - [x] ingredientes

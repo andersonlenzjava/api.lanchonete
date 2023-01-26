@@ -124,13 +124,14 @@ Para o seu cliente, é imprescindível que o sistema tenha algumas funções. </
 
 <p>Para cada um dos controllers de ingredientes e item foram implementadas os seguintes endpoints para as requisições HTTP compondo  CRUD:</p>
 <p>Ex: Para o molho do lanche:</p>
+</br>
 @RequestMapping("/ingrediente/lanches")  => Endereço URL básico:</br>
 @GetMapping("/molho") => Listar todos os molhos (com paginação).</br>
 @GetMapping("/molho/{id}") => Listar um molho especifico por seu id.</br>
 @PostMapping("/molho") => Cadastrar um molho com um JSON.</br>
 @PutMapping("/molho/{id}") => Atualizar um molho pelo id e com um JSON.</br>
 @DeleteMapping("/molho/{id}") => Deletar um molho por um id. </br>
-<p></p>
+
 - [x] services 
 
 <p>Para cada um dos endpoints das controllers foram montados métodos dentro das services para acessar o banco de dados através dos Repositorys, e juntamente com os métodos das entidades, completar o CRUD e regras de negócio. </p>  

@@ -7,6 +7,7 @@ Os requisitos do cliente são apresentados no desafio de programação orientada
 </p>
 
 ## Índice
+
 <p><a href="#API-Sistema-de-Lanchonete">API Sistema de Lanchonete</a></p>
  <p><a href="#Introdução">Introdução</a></p>
  <p><a href="#Técnicas-e-Tecnologias-utilizadas">Técnicas e Tecnologias utilizadas</a></p>
@@ -155,7 +156,7 @@ Para o seu cliente, é imprescindível que o sistema tenha algumas funções. </
 
 ## Status: 62/65
 
-### Como utilizar:
+## Como utilizar:
    
 #### Carregamento do projeto
 
@@ -179,7 +180,7 @@ Para o seu cliente, é imprescindível que o sistema tenha algumas funções. </
    <p>Mudar para status processando. </p>
    <p>E após o pedido estar pronto, realizar o pagamento através do endpoint RetornaCalculoTrocoPedido.</p>
 
-#### Um melhor detalhamento do uso desta API é apresentado no video deste link. 
+#### Um melhor detalhamento do uso desta API é apresentado no video deste link.
 
 ## Considerações:
 

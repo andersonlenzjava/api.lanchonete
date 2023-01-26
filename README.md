@@ -15,7 +15,7 @@ Os requisitos do cliente são apresentados no desafio de programação orientada
 <a href="#Requisitos-gerais-apresentado-pelo-cliente">Requisitos gerais apresentado pelo cliente</a></br>
 <a href="#Funcionalidades-estabelecidas-para-atender-a-demanda-do-cliente">Funcionalidades estabelecidas para atender a demanda do cliente</a></br>
 <a href="#Etapas">Etapas</a></br>
-<a href="#status-6465">Status: 61/65</a></br>
+<a href="#status-6467">Status: 64/67</a></br>
 <a href="#Como-utilizar">Como utilizar</a></br>
 <a href="#Um-melhor-detalhamento-do-uso-desta-API-é-apresentado-no-video-deste-link">VÍDEO do projeto</a></br>
 <a href="#Considerações">Considerações</a></br>
@@ -153,8 +153,10 @@ Para o seu cliente, é imprescindível que o sistema tenha algumas funções. </
 - [x] implementação do ValorPagoInsuficienteException
 - [x] liberação do cors com o WebConfig 
 - [ ] deploy no heroku 
+- [ ] Gravar video explicativo da composição do sistema
+- [ ] Gravar video explicativo da utilização do sistema
 
-## Status: 64/65
+## Status: 64/67
 
 ## Como utilizar:
    

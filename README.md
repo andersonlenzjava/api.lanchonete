@@ -10,7 +10,7 @@ Os requisitos do cliente são apresentados no desafio de programação orientada
 
 <p><a href="#API-Sistema-de-Lanchonete">API Sistema de Lanchonete</a></p>
 <p><a href="#Introdução">Introdução</a></p>
-<p><a href="#Técnicas-e-Tecnologias-utilizadas">Técnicas e Tecnologias utilizadas</a></p>
+<p><a href="#%EF%B8%8Ftécnicas-e-tecnologias-utilizadas">Técnicas e Tecnologias utilizadas</a></p>
 <p><a href="#Funcionalidades">Funcionalidades</a></p>
 <p><a href="#Requisitos-gerais-apresentado-pelo-cliente">Requisitos gerais apresentado pelo cliente</a></p>
 <p><a href="#Funcionalidades-estabelecidas-para-atender-a-demanda-do-cliente">Funcionalidades estabelecidas para atender a demanda do cliente</a></p>

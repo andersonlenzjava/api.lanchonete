@@ -12,27 +12,27 @@ Os requisitos do cliente são apresentados no desafio de programação orientada
 <a href="#Introdução">Introdução</a></br>
 <a href="#%EF%B8%8Ftécnicas-e-tecnologias-utilizadas">Técnicas e Tecnologias utilizadas</a></br>
 <a href="#Funcionalidades">Funcionalidades</a></br>
-<p><a href="#Requisitos-gerais-apresentado-pelo-cliente">Requisitos gerais apresentado pelo cliente</a></p>
-<p><a href="#Funcionalidades-estabelecidas-para-atender-a-demanda-do-cliente">Funcionalidades estabelecidas para atender a demanda do cliente</a></p>
-<p><a href="#Etapas">Etapas</a></p>
-<p><a href="#status-6265">Status: 61/65</a></p>
-<p><a href="#Como-utilizar">Como utilizar</a></p>
-<p><a href="#Um-melhor-detalhamento-do-uso-desta-API-é-apresentado-no-video-deste-link">VÍDEO do projeto</a></p>
-<p><a href="#Considerações">Considerações</a></p>
+<a href="#Requisitos-gerais-apresentado-pelo-cliente">Requisitos gerais apresentado pelo cliente</a></br>
+<a href="#Funcionalidades-estabelecidas-para-atender-a-demanda-do-cliente">Funcionalidades estabelecidas para atender a demanda do cliente</a></br>
+<a href="#Etapas">Etapas</a></br>
+<a href="#status-6265">Status: 61/65</a></br>
+<a href="#Como-utilizar">Como utilizar</a></br>
+<a href="#Um-melhor-detalhamento-do-uso-desta-API-é-apresentado-no-video-deste-link">VÍDEO do projeto</a></br>
+<a href="#Considerações">Considerações</a></br>
 
 ## ✔️Técnicas e Tecnologias utilizadas
 
-* <p> Java </p> 
-* <p>  Spring Framework</p> 
-* <p> Spring Boot </p> 
-* <p> Spring Boot Validation</p> 
-* <p> Spring Data JPA</p> 
-* <p> Maven</p> 
-* <p> Lombok</p> 
-* <p> Flyway</p> 
-* <p> PostgresSQL</p> 
-* <p> Postman </p> 
-* <p> Programação Orientada a Objetos</p> 
+*  Java </br> 
+*   Spring Framework</br> 
+*  Spring Boot </br>
+*  Spring Boot Validation</br>
+*  Spring Data JPA</br> 
+*  Maven</br>
+*  Lombok</br> 
+*  Flyway</br>
+*  PostgresSQL</br> 
+*  Postman </br> 
+*  Programação Orientada a Objetos</br> 
 
 ## 📃Funcionalidades
 
@@ -124,12 +124,12 @@ Para o seu cliente, é imprescindível que o sistema tenha algumas funções. </
 
 <p>Para cada um dos controllers de ingredientes e item foram implementadas os seguintes endpoints para as requisições HTTP compondo  CRUD:</p>
 <p>Ex: Para o molho do lanche:</p>
-<p>@RequestMapping("/ingrediente/lanches")  => Endereço URL básico:</p>
-<p>@GetMapping("/molho") => Listar todos os molhos (com paginação).</p>
-<p>@GetMapping("/molho/{id}") => Listar um molho especifico por seu id.</p>
-<p>@PostMapping("/molho") => Cadastrar um molho com um JSON.</p>
-<p>@PutMapping("/molho/{id}") => Atualizar um molho pelo id e com um JSON.</p>
-<p>@DeleteMapping("/molho/{id}") => Deletar um molho por um id. </p>
+@RequestMapping("/ingrediente/lanches")  => Endereço URL básico:</br>
+@GetMapping("/molho") => Listar todos os molhos (com paginação).</br>
+@GetMapping("/molho/{id}") => Listar um molho especifico por seu id.</br>
+@PostMapping("/molho") => Cadastrar um molho com um JSON.</br>
+@PutMapping("/molho/{id}") => Atualizar um molho pelo id e com um JSON.</br>
+@DeleteMapping("/molho/{id}") => Deletar um molho por um id. </br>
 
 - [x] services 
 

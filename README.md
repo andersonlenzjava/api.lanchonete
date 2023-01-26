@@ -1,12 +1,12 @@
 # API Sistema de Lanchonete
 
-<h2>#Introdução</h2>
+##Introdução
 
 <p>Este Projeto consiste em uma API Rest desenvolvida em Java juntamente com o Spring Framework, para atender os requisitos de um sistema de gerenciamento de uma lanchonete, com funcionalidades de cadastro de ingredientes, montagem de itens, e montagem e controle dos pedidos com estes itens.  
 Os requisitos do cliente são apresentados no desafio de programação orientada a objetos encontrado neste link: https://www.computersciencemaster.com.br/exercicio-sistema-de-lanchonete/.
 </p>
 
-# Índice
+##Índice
 <a href="#API-Sistema-de-Lanchonete">API Sistema de Lanchonete</a>
  <a href="#Introdução">Introdução</a>
  <a href="#Técnicas-e-Tecnologias-utilizadas">Técnicas e Tecnologias utilizadas</a>
@@ -21,7 +21,7 @@ Os requisitos do cliente são apresentados no desafio de programação orientada
  <a href="#Um-melhor-detalhamento-do-uso-desta-API-é-apresentado-no-video-deste-link.">Um melhor detalhamento do uso desta API é apresentado no video deste link.</a>
  <a href="#Considerações:">Considerações:</a>
 
-<h2>✔️#Técnicas e Tecnologias utilizadas </h2>
+##✔️#Técnicas e Tecnologias utilizadas
 
 * <p> Java </p> 
 * <p>  Spring Framework</p> 
@@ -35,7 +35,7 @@ Os requisitos do cliente são apresentados no desafio de programação orientada
 * <p> Postman </p> 
 * <p> Programação Orientada a Objetos</p> 
 
-<h2>📃#Funcionalidades </h2>
+📃##Funcionalidades
 
 <h3>Requisitos gerais apresentado pelo cliente:</h3>
 <p>A lanchonete possui 3 principais itens de venda: pizzas, lanches e salgadinhos. Inicialmente, o sistema será testado para controlar as vendas desses 3 itens apenas. 

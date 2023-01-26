@@ -78,7 +78,7 @@ Para o seu cliente, é imprescindível que o sistema tenha algumas funções. </
        - [x] SalgadinhoMassa
        - [x] SalgadinhoRecheio
        - [x] SalgadinhoTipoPreparo
-     - [ ] Verificação da validade dos ingrediente
+     - [x] Verificação da validade dos ingrediente
      - [x] Item
        - [x] Item
        - [x] Lanche
@@ -86,7 +86,7 @@ Para o seu cliente, é imprescindível que o sistema tenha algumas funções. </
        - [x] Salgadinho
      - [x] Calculo do peso total do item
      - [x] Calculo do valor total do item
-     - [ ] Atribuição da validade do item
+     - [x] Atribuição da validade do item
   
      - [x] Pedido
        - [x] Pedido
@@ -154,8 +154,7 @@ Para o seu cliente, é imprescindível que o sistema tenha algumas funções. </
 - [x] liberação do cors com o WebConfig 
 - [ ] deploy no heroku 
 
-
-## Status: 62/65
+## Status: 64/65
 
 ## Como utilizar:
    

@@ -12,13 +12,13 @@ Os requisitos do cliente são apresentados no desafio de programação orientada
 <p><a href="#Introdução">Introdução</a></p>
 <p><a href="#Técnicas-e-Tecnologias-utilizadas">Técnicas e Tecnologias utilizadas</a></p>
 <p><a href="#Funcionalidades">Funcionalidades</a></p>
-<p><a href="#Requisitos-gerais-apresentado-pelo-cliente">Requisitos gerais apresentado pelo cliente:</a></p>
-<p><a href="#Funcionalidades-estabelecidas-para-atender-a-demanda-do-cliente">Funcionalidades estabelecidas para atender a demanda do cliente:</a></p>
+<p><a href="#Requisitos-gerais-apresentado-pelo-cliente">Requisitos gerais apresentado pelo cliente</a></p>
+<p><a href="#Funcionalidades-estabelecidas-para-atender-a-demanda-do-cliente">Funcionalidades estabelecidas para atender a demanda do cliente</a></p>
 <p><a href="#Etapas">Etapas</a></p>
-<p><a href="#Status:-62/65">Status: 61/65</a></p>
+<p><a href="#Status">Status: 61/65</a></p>
 <p><a href="#Como-utilizar">Como utilizar</a></p>
 <p><a href="#Um-melhor-detalhamento-do-uso-desta-API-é-apresentado-no-video-deste-link">Um melhor detalhamento do uso desta API é apresentado no video deste link.</a></p>
-<p><a href="#Considerações:">Considerações:</a></p>
+<p><a href="#Considerações">Considerações</a></p>
 
 ## ✔️Técnicas e Tecnologias utilizadas
 

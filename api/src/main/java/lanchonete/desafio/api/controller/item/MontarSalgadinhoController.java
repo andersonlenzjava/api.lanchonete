@@ -4,6 +4,7 @@ import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import lanchonete.desafio.api.domain.item.Salgadinho.MontarSalgadinhoRegister;
 import lanchonete.desafio.api.domain.item.Salgadinho.MontarSalgadinhoResponse;
+import lanchonete.desafio.api.infra.exeption.ItemVencidoException;
 import lanchonete.desafio.api.service.item.MontarSalgadinhoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -45,7 +46,7 @@ public class MontarSalgadinhoController {
 	@PostMapping
 	@Transactional
 	public ResponseEntity<MontarSalgadinhoResponse> cadastrarSalgadinho(@RequestBody @Valid MontarSalgadinhoRegister montarSalgadinhoForm,
-			UriComponentsBuilder uriBuilder) {
+			UriComponentsBuilder uriBuilder) throws ItemVencidoException {
 		return montarSalgadinhoService.cadastrarSalgadinho(montarSalgadinhoForm, uriBuilder);
 	}
 	

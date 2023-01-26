@@ -6,7 +6,10 @@ import lanchonete.desafio.api.domain.ingrediente.PizzaMolho.PizzaMolho;
 import lanchonete.desafio.api.domain.ingrediente.PizzaRecheio.PizzaRecheio;
 import lanchonete.desafio.api.domain.item.item.Item;
 import lanchonete.desafio.api.domain.pedido.Pedido.Pedido;
+import lanchonete.desafio.api.infra.exeption.ItemVencidoException;
 import lombok.*;
+
+import java.time.LocalDate;
 
 @Entity
 @Getter
@@ -30,12 +33,18 @@ public class Pizza {
     @ManyToOne
     private PizzaRecheio pizzaRecheio;
 
-    public Pizza(Pedido pedido, PizzaBorda pizzaBorda, PizzaMolho pizzaMolho, PizzaRecheio pizzaRecheio) {
+    public Pizza(Pedido pedido, PizzaBorda pizzaBorda, PizzaMolho pizzaMolho, PizzaRecheio pizzaRecheio) throws ItemVencidoException {
         this.pedido = pedido;
         this.pizzaBorda = pizzaBorda;
         this.pizzaMolho = pizzaMolho;
         this.pizzaRecheio = pizzaRecheio;
+
+        this.VerificaValidade();
+
         this.item = new Item();
+
+        this.item.setDataValidade(LocalDate.now().plusDays(4));
+
         this.CalculosPizza();
     }
 
@@ -47,6 +56,12 @@ public class Pizza {
         this.item.setPesoItem(pizzaBorda.getIngrediente().getPeso() +
                 pizzaMolho.getIngrediente().getPeso() +
                 pizzaRecheio.getIngrediente().getPeso());
+    }
+
+    public void VerificaValidade() throws ItemVencidoException {
+        this.pizzaBorda.getIngrediente().verificaValidade(this.pizzaBorda.getTipoBorda());
+        this.pizzaMolho.getIngrediente().verificaValidade(this.pizzaMolho.getTipoMolho());
+        this.pizzaRecheio.getIngrediente().verificaValidade(this.pizzaRecheio.getTipoRecheio());
     }
 
 }

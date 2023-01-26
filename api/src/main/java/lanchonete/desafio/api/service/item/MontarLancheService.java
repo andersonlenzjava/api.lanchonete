@@ -16,6 +16,7 @@ import lanchonete.desafio.api.domain.item.Lanche.MontarLancheResponse;
 import lanchonete.desafio.api.domain.pedido.Pedido.Pedido;
 import lanchonete.desafio.api.domain.pedido.Pedido.PedidoRepository;
 import lanchonete.desafio.api.domain.pedido.StatusPedido.StatusPedido;
+import lanchonete.desafio.api.infra.exeption.ItemVencidoException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -68,7 +69,7 @@ public class MontarLancheService {
 
 	// post
 	public ResponseEntity<MontarLancheResponse> cadastrarLanche(MontarLancheRegister montarLancheRegister,
-			UriComponentsBuilder uriBuilder) {
+			UriComponentsBuilder uriBuilder) throws ItemVencidoException {
 
 		Optional<Pedido> pedidoOptional = pedidoRepository.findById(montarLancheRegister.pedidoId());
 		Optional<LancheMolho> lancheMolhoOptional = lancheMolhoRepository.findById(montarLancheRegister.lancheMolhoId());
@@ -128,7 +129,7 @@ public class MontarLancheService {
 						LancheMolho lancheMolho = lancheMolhoOptional.get();
 						LancheRecheio lancheRecheio = lancheRecheioOptional.get();
 						LancheTipoPao lancheTipoPao = lancheTipoPaoOptional.get();
-	
+
 						lanche.setLancheMolho(lancheMolho);
 						lanche.setLancheRecheio(lancheRecheio);
 						lanche.setLancheTipoPao(lancheTipoPao);

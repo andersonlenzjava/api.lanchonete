@@ -4,6 +4,7 @@ import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import lanchonete.desafio.api.domain.item.Pizza.MontarPizzaRegister;
 import lanchonete.desafio.api.domain.item.Pizza.MontarPizzaResponse;
+import lanchonete.desafio.api.infra.exeption.ItemVencidoException;
 import lanchonete.desafio.api.service.item.MontarPizzaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -44,7 +45,7 @@ public class MontarPizzaController {
 	@PostMapping
 	@Transactional
 	public ResponseEntity<MontarPizzaResponse> cadastrarPizza(@RequestBody @Valid MontarPizzaRegister montarPizzaForm,
-			UriComponentsBuilder uriBuilder) {
+			UriComponentsBuilder uriBuilder) throws ItemVencidoException {
 		return montarPizzaService.cadastrarPizza(montarPizzaForm, uriBuilder);
 	}
 	

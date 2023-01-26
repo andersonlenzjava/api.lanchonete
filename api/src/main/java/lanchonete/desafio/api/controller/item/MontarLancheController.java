@@ -4,6 +4,7 @@ import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import lanchonete.desafio.api.domain.item.Lanche.MontarLancheRegister;
 import lanchonete.desafio.api.domain.item.Lanche.MontarLancheResponse;
+import lanchonete.desafio.api.infra.exeption.ItemVencidoException;
 import lanchonete.desafio.api.service.item.MontarLancheService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -44,7 +45,7 @@ public class MontarLancheController {
 	@PostMapping
 	@Transactional
 	public ResponseEntity<MontarLancheResponse> cadastrarLanche(@RequestBody @Valid MontarLancheRegister montarLancheForm,
-			UriComponentsBuilder uriBuilder) {
+			UriComponentsBuilder uriBuilder) throws ItemVencidoException {
 		return montarLancheService.cadastrarLanche(montarLancheForm, uriBuilder);
 	}
 	

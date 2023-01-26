@@ -16,6 +16,7 @@ import lanchonete.desafio.api.domain.item.Pizza.PizzaRepository;
 import lanchonete.desafio.api.domain.pedido.Pedido.Pedido;
 import lanchonete.desafio.api.domain.pedido.Pedido.PedidoRepository;
 import lanchonete.desafio.api.domain.pedido.StatusPedido.StatusPedido;
+import lanchonete.desafio.api.infra.exeption.ItemVencidoException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -70,7 +71,7 @@ public class MontarPizzaService {
 
 	// post
 	public ResponseEntity<MontarPizzaResponse> cadastrarPizza(MontarPizzaRegister montarPizzaRegister,
-															  UriComponentsBuilder uriBuilder) {
+															  UriComponentsBuilder uriBuilder) throws ItemVencidoException {
 		
 		Optional<Pedido> pedidoOptional = pedidoRepository.findById(montarPizzaRegister.pedidoId());
 		Optional<PizzaBorda> pizzaBordaOptional = pizzaBordaRepository.findById(montarPizzaRegister.pizzaBordaId());

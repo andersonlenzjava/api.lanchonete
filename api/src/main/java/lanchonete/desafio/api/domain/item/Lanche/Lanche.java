@@ -6,7 +6,10 @@ import lanchonete.desafio.api.domain.ingrediente.LancheRecheio.LancheRecheio;
 import lanchonete.desafio.api.domain.ingrediente.LancheTipoPao.LancheTipoPao;
 import lanchonete.desafio.api.domain.item.item.Item;
 import lanchonete.desafio.api.domain.pedido.Pedido.Pedido;
+import lanchonete.desafio.api.infra.exeption.ItemVencidoException;
 import lombok.*;
+
+import java.time.LocalDate;
 
 @Entity
 @Getter
@@ -30,12 +33,18 @@ public class Lanche {
     @ManyToOne
     private LancheMolho lancheMolho;
 
-    public Lanche(Pedido pedido, LancheTipoPao lancheTipoPao, LancheRecheio lancheRecheio, LancheMolho lancheMolho) {
+    public Lanche(Pedido pedido, LancheTipoPao lancheTipoPao, LancheRecheio lancheRecheio, LancheMolho lancheMolho) throws ItemVencidoException {
         this.pedido = pedido;
         this.lancheTipoPao = lancheTipoPao;
         this.lancheRecheio = lancheRecheio;
         this.lancheMolho = lancheMolho;
+
+        this.VerificaValidade();
+
         this.item = new Item();
+
+        this.item.setDataValidade(LocalDate.now().plusDays(1));
+
         this.CalculosLanche();
     }
 
@@ -50,6 +59,12 @@ public class Lanche {
                         lancheRecheio.getIngrediente().getPeso() +
                         lancheMolho.getIngrediente().getPeso()); ;
 
+    }
+
+    public void VerificaValidade() throws ItemVencidoException {
+        this.lancheTipoPao.getIngrediente().verificaValidade(this.lancheTipoPao.getTipoPao());
+        this.lancheRecheio.getIngrediente().verificaValidade(this.lancheRecheio.getTipoRecheio());
+        this.lancheMolho.getIngrediente().verificaValidade(this.lancheMolho.getTipoMolho());
     }
 
 }

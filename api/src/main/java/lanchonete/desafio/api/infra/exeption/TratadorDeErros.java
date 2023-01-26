@@ -41,6 +41,12 @@ public class TratadorDeErros {
         return ResponseEntity.badRequest().body(erros);
     }
 
+    @ExceptionHandler(ItemVencidoException.class)
+    public ResponseEntity tratarError400(ItemVencidoException ex){
+        var erros = ex.getMessage();
+        return ResponseEntity.badRequest().body(erros);
+    }
+
     // pega a minha exception e joga no corpo da requisição este erro
     @ExceptionHandler(ValorPagoInsuficienteException.class)
     public ResponseEntity tratarError400(ValorPagoInsuficienteException ex){

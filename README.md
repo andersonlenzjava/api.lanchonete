@@ -38,6 +38,7 @@ Os requisitos do cliente são apresentados no desafio de programação orientada
 ## 📃Funcionalidades
 
 ### Requisitos gerais apresentado pelo cliente:
+
 <p>A lanchonete possui 3 principais itens de venda: pizzas, lanches e salgadinhos. Inicialmente, o sistema será testado para controlar as vendas desses 3 itens apenas. 
  Todos os itens vendidos devem conter: preço de venda, data de validade e peso. 
 O sistema da nossa lanchonete deverá criar um pedido, esse pedido será composto pelo nome do cliente, itens que foram consumidos e taxa de serviço. 
@@ -156,27 +157,30 @@ Para o seu cliente, é imprescindível que o sistema tenha algumas funções. </
 
 ### Como utilizar:
    
-   #### Carregamento do projeto
-      <p>Neste momento para utilizar o sistema é necessário rodar o sistema offline dentro de alguma IDE, através do Spring Boot.</p>
-      <p><strong>Etapas:</strong></p>
-        <p>Download do projeto e descompactar </p>
-        <p>Fazer a atualização das dependências com o Maven</p>
-        <p>Fazer a configuração do banco de dados de sua preferência</p>
-        <p>Criar o banco de dados </p>
-        <p>Configurar a API a este banco de dados</p>
-        <p>Rodar o projeto com a app.properties em spring.jpa.hibernate.ddl-auto=create</p>
-        <p>Em seguida colocar spring.jpa.hibernate.ddl-auto=none</p>
-        <p>Abrir a collection de endpoints com o software que gerencia requisições PostMan</p>
+#### Carregamento do projeto
 
-   #### Na operacionalização do sistema obedecer a seguinte sequência:
-      <p>Cadastrar todos os ingredientes conforme os exemplos em JSON apresentados na collection de endpoints.</p>
-      <p>Fazer a abertura de um novo pedido. </p>
-      <p>Com o id do pedido e dos ingredientes, criar os itens deste pedido podendo ser:</p>
-      <p>Lanche, Pizza ou Salgadinho. </p>
-      <p>Mudar para status processando. </p>
-      <p>E após o pedido estar pronto, realizar o pagamento através do endpoint RetornaCalculoTrocoPedido.</p>
+   <p>Neste momento para utilizar o sistema é necessário rodar o sistema offline dentro de alguma IDE, através do Spring Boot.</p>
+   <p><strong>Etapas:</strong></p>
+     <p>Download do projeto e descompactar </p>
+     <p>Fazer a atualização das dependências com o Maven</p>
+     <p>Fazer a configuração do banco de dados de sua preferência</p>
+     <p>Criar o banco de dados </p>
+     <p>Configurar a API a este banco de dados</p>
+     <p>Rodar o projeto com a app.properties em spring.jpa.hibernate.ddl-auto=create</p>
+     <p>Em seguida colocar spring.jpa.hibernate.ddl-auto=none</p>
+     <p>Abrir a collection de endpoints com o software que gerencia requisições PostMan</p>
 
-   #### Um melhor detalhamento do uso desta API é apresentado no video deste link. 
+#### Na operacionalização do sistema obedecer a seguinte sequência:
+
+   <p>Cadastrar todos os ingredientes conforme os exemplos em JSON apresentados na collection de endpoints.</p>
+   <p>Fazer a abertura de um novo pedido. </p>
+   <p>Com o id do pedido e dos ingredientes, criar os itens deste pedido podendo ser:</p>
+   <p>Lanche, Pizza ou Salgadinho. </p>
+   <p>Mudar para status processando. </p>
+   <p>E após o pedido estar pronto, realizar o pagamento através do endpoint RetornaCalculoTrocoPedido.</p>
+
+#### Um melhor detalhamento do uso desta API é apresentado no video deste link. 
 
 ## Considerações:
+
  <p>Neste sistema foi possível implementar o CRUD dos ingredientes, dos items e dos pedidos, bem como as regras de negócio estabelecidas pelos requisitos do cliente. </p>

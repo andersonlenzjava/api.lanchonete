@@ -7,19 +7,19 @@ Os requisitos do cliente são apresentados no desafio de programação orientada
 </p>
 
 ## Índice
-<a href="#API-Sistema-de-Lanchonete">API Sistema de Lanchonete</a>
- <a href="#Introdução">Introdução</a>
- <a href="#Técnicas-e-Tecnologias-utilizadas">Técnicas e Tecnologias utilizadas</a>
- <a href="#Funcionalidades">Funcionalidades</a>
-  <a href="#Requisitos-gerais-apresentado-pelo-cliente:">Requisitos gerais apresentado pelo cliente:</a>
-  <a href="#Funcionalidades-estabelecidas-para-atender-a-demanda-do-cliente:">Requisitos gerais apresentado pelo cliente:</a>
- <a href="#Etapas:">Etapas:</a>
- <a href="#Status-61-/-65">Status 61 / 65</a>
- <a href="#Como-utilizar:">Como utilizar:</a>
-  <a href="#Carregamento-do-projeto">Carregamento do projeto</a>
- <a href="#Na-operacionalização-do-sistema-obedecer-a-seguinte-sequência:">Na operacionalização do sistema obedecer a seguinte sequência:</a>
- <a href="#Um-melhor-detalhamento-do-uso-desta-API-é-apresentado-no-video-deste-link.">Um melhor detalhamento do uso desta API é apresentado no video deste link.</a>
- <a href="#Considerações:">Considerações:</a>
+<p><a href="#API-Sistema-de-Lanchonete">API Sistema de Lanchonete</a></p>
+ <p><a href="#Introdução">Introdução</a></p>
+ <p><a href="#Técnicas-e-Tecnologias-utilizadas">Técnicas e Tecnologias utilizadas</a></p>
+ <p><a href="#Funcionalidades">Funcionalidades</a></p>
+  <p><a href="#Requisitos-gerais-apresentado-pelo-cliente:">Requisitos gerais apresentado pelo cliente:</a></p>
+  <p><a href="#Funcionalidades-estabelecidas-para-atender-a-demanda-do-cliente:">Requisitos gerais apresentado pelo cliente:</a></p>
+ <p><a href="#Etapas:">Etapas:</a></p>
+ <p><a href="#Status-61-/-65">Status 61 / 65</a></p>
+ <p><a href="#Como-utilizar:">Como utilizar:</a></p>
+  <p><a href="#Carregamento-do-projeto">Carregamento do projeto</a></p>
+ <p><a href="#Na-operacionalização-do-sistema-obedecer-a-seguinte-sequência:">Na operacionalização do sistema obedecer a seguinte sequência:</a></p>
+ <p><a href="#Um-melhor-detalhamento-do-uso-desta-API-é-apresentado-no-video-deste-link.">Um melhor detalhamento do uso desta API é apresentado no video deste link.</a></p>
+ <p><a href="#Considerações:">Considerações:</a></p>
 
 ## ✔️Técnicas e Tecnologias utilizadas
 

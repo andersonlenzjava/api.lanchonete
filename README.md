@@ -8,13 +8,13 @@ Os requisitos do cliente são apresentados no desafio de programação orientada
 
 ## Índice
 <p><a href="#API-Sistema-de-Lanchonete">API Sistema de Lanchonete</a></p>
- <p><a href="#Introdução">Introdução</a></p>
- <p><a href="#Técnicas-e-Tecnologias-utilizadas">Técnicas e Tecnologias utilizadas</a></p>
- <p><a href="#Funcionalidades">Funcionalidades</a></p>
-  <p><a href="#Requisitos-gerais-apresentado-pelo-cliente:">Requisitos gerais apresentado pelo cliente:</a></p>
+ <p><a href="##Introdução">Introdução</a></p>
+ <p><a href="##Técnicas-e-Tecnologias-utilizadas">Técnicas e Tecnologias utilizadas</a></p>
+ <p><a href="##Funcionalidades">Funcionalidades</a></p>
+  <p><a href="###Requisitos-gerais-apresentado-pelo-cliente:">Requisitos gerais apresentado pelo cliente:</a></p>
   <p><a href="#Funcionalidades-estabelecidas-para-atender-a-demanda-do-cliente:">Requisitos gerais apresentado pelo cliente:</a></p>
  <p><a href="#Etapas:">Etapas:</a></p>
- <p><a href="#Status-61-/-65">Status 61 / 65</a></p>
+ <p><a href="#Status:-62/65">Status: 61/65</a></p>
  <p><a href="#Como-utilizar:">Como utilizar:</a></p>
   <p><a href="#Carregamento-do-projeto">Carregamento do projeto</a></p>
  <p><a href="#Na-operacionalização-do-sistema-obedecer-a-seguinte-sequência:">Na operacionalização do sistema obedecer a seguinte sequência:</a></p>
@@ -152,9 +152,9 @@ Para o seu cliente, é imprescindível que o sistema tenha algumas funções. </
 - [ ] deploy no heroku 
 
 
-## Status 61 / 65
+## Status: 62/65
 
- ### Como utilizar:
+### Como utilizar:
    
    #### Carregamento do projeto
       <p>Neste momento para utilizar o sistema é necessário rodar o sistema offline dentro de alguma IDE, através do Spring Boot.</p>

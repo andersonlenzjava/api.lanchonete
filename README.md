@@ -175,7 +175,7 @@ Para o seu cliente, é imprescindível que o sistema tenha algumas funções. </
 
 #### Na operacionalização do sistema obedecer a seguinte sequência:
 
-   Cadastrar todos os ingredientes conforme os exemplos em JSON apresentados na collection de endpoints.</br>
+   Cadastrar todos os ingredientes conforme os exemplos em JSON apresentados na collection de endpoints junto ao arquivo do postman.</br>
    Fazer a abertura de um novo pedido. </br>
    Com o id do pedido e dos ingredientes, criar os itens deste pedido podendo ser:</br>
    Lanche, Pizza ou Salgadinho. </br>

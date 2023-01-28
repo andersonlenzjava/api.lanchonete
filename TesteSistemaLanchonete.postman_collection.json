@@ -1,0 +1,2211 @@
+{
+	"info": {
+		"_postman_id": "dcf268fd-42f0-4e87-83ba-a97e8db574de",
+		"name": "TesteSistemaLanchonete",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23154256"
+	},
+	"item": [
+		{
+			"name": "CadastroIngredientes",
+			"item": [
+				{
+					"name": "Cadastro Salgadinho",
+					"item": [
+						{
+							"name": "Salgadinho massa",
+							"item": [
+								{
+									"name": "listarSalgadinhoMassaPorNome",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/ingrediente/salgadinhos/massa?tipoMassa=Madioca",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"ingrediente",
+												"salgadinhos",
+												"massa"
+											],
+											"query": [
+												{
+													"key": "tipoMassa",
+													"value": "Madioca"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "listarSalgadinhoMassa",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/ingrediente/salgadinhos/massa",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"ingrediente",
+												"salgadinhos",
+												"massa"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "detalharSalgadinhoMassaPorId",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/ingrediente/salgadinhos/massa/1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"ingrediente",
+												"salgadinhos",
+												"massa",
+												"1"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "cadastrarSalgadinhoMassa",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "",
+												"value": "",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"tipoMassa\":\"Aveia\",\r\n    \"precoVenda\":\"4.1\",\r\n    \"dataValidade\":\"12/12/2022\",\r\n    \"peso\":\"71\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/ingrediente/salgadinhos/massa",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"ingrediente",
+												"salgadinhos",
+												"massa"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "atualizarSalgadinhoMassa",
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"tipoBorda\":\"Mostarda\",\r\n    \"precoVenda\":\"6.5\",\r\n    \"dataValidade\":\"12/12/2022\",\r\n    \"peso\":\"110\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/ingrediente/salgadinhos/massa/1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"ingrediente",
+												"salgadinhos",
+												"massa",
+												"1"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "removerSalgadinhoMassa",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/ingrediente/salgadinhos/massa/5",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"ingrediente",
+												"salgadinhos",
+												"massa",
+												"5"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Salgadinho recheio",
+							"item": [
+								{
+									"name": "listarSalgadinhoRecheioPorNome",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/ingrediente/salgadinhos/recheio?tipoRecheio",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"ingrediente",
+												"salgadinhos",
+												"recheio"
+											],
+											"query": [
+												{
+													"key": "tipoRecheio",
+													"value": null
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "listarSalgadinhoRecheio",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/ingrediente/salgadinhos/recheio",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"ingrediente",
+												"salgadinhos",
+												"recheio"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "detalharSalgadinhoRecheioPorId",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/ingrediente/salgadinhos/recheio/2",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"ingrediente",
+												"salgadinhos",
+												"recheio",
+												"2"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "cadastrarSalgadinhoRecheio",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "",
+												"value": "",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"tipoRecheio\":\"Frago com molho da casa\",\r\n    \"precoVenda\":\"6.5\",\r\n    \"dataValidade\":\"12/12/2022\",\r\n    \"peso\":\"110\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/ingrediente/salgadinhos/recheio",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"ingrediente",
+												"salgadinhos",
+												"recheio"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "atualizarSalgadinhoRecheio",
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"tipoRecheio\":\"Mostarda\",\r\n    \"precoVenda\":\"6.5\",\r\n    \"dataValidade\":\"12/12/2022\",\r\n    \"peso\":\"110\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/ingrediente/salgadinhos/recheio/1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"ingrediente",
+												"salgadinhos",
+												"recheio",
+												"1"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "removerSalgadinhoRecheio",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/ingrediente/salgadinhos/recheio/3",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"ingrediente",
+												"salgadinhos",
+												"recheio",
+												"3"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Salgadinho TipoPreparo",
+							"item": [
+								{
+									"name": "listarSalgadinhoTipoPreparoPorNome",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/ingrediente/salgadinhos/tipoPreparo?tipoPreparo",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"ingrediente",
+												"salgadinhos",
+												"tipoPreparo"
+											],
+											"query": [
+												{
+													"key": "tipoPreparo",
+													"value": null
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "listarSalgadinhoTipoPreparo",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/ingrediente/salgadinhos/tipoPreparo",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"ingrediente",
+												"salgadinhos",
+												"tipoPreparo"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "detalharSalgadinhoTipoPreparoPorId",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/ingrediente/salgadinhos/tipoPreparo/2",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"ingrediente",
+												"salgadinhos",
+												"tipoPreparo",
+												"2"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "cadastrarSalgadinhoTipoPreparo",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "",
+												"value": "",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"tipoPreparo\":\"Assado\",\r\n    \"precoVenda\":\"0.1\",\r\n    \"dataValidade\":\"12/12/2022\",\r\n    \"peso\":\"20\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/ingrediente/salgadinhos/tipoPreparo",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"ingrediente",
+												"salgadinhos",
+												"tipoPreparo"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "atualizarSalgadinhoTipoPreparo",
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"tipoPreparo\":\"Mostarda\",\r\n    \"precoVenda\":\"6.5\",\r\n    \"dataValidade\":\"12/12/2022\",\r\n    \"peso\":\"110\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/ingrediente/salgadinhos/tipoPreparo/1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"ingrediente",
+												"salgadinhos",
+												"tipoPreparo",
+												"1"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "removerSalgadinhoTipoPreparo",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/ingrediente/salgadinhos/tipoPreparo/4",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"ingrediente",
+												"salgadinhos",
+												"tipoPreparo",
+												"4"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Cadastro Pizza",
+					"item": [
+						{
+							"name": "Pizza Borda",
+							"item": [
+								{
+									"name": "listarPizzaBordaPorNome",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/ingrediente/pizzas/borda?tipoBorda=carne",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"ingrediente",
+												"pizzas",
+												"borda"
+											],
+											"query": [
+												{
+													"key": "tipoBorda",
+													"value": "carne"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "listarPizzaBorda",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/ingrediente/pizzas/borda",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"ingrediente",
+												"pizzas",
+												"borda"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "detalharPizzaBordaPorId",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/ingrediente/pizzas/borda/2",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"ingrediente",
+												"pizzas",
+												"borda",
+												"2"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "cadastrarPizzaBorda",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "",
+												"value": "",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"tipoBorda\":\"com\",\r\n    \"precoVenda\":\"10\",\r\n    \"dataValidade\":\"12/12/2022\",\r\n    \"peso\":\"700\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/ingrediente/pizzas/borda",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"ingrediente",
+												"pizzas",
+												"borda"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "atualizarPizzaBorda",
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"tipoMolho\":\"Mostarda\",\r\n    \"precoVenda\":\"6.5\",\r\n    \"dataValidade\":\"12/12/2022\",\r\n    \"peso\":\"110\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/ingrediente/pizzas/borda/1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"ingrediente",
+												"pizzas",
+												"borda",
+												"1"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "removerPizzaBorda",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/ingrediente/pizzas/borda/3",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"ingrediente",
+												"pizzas",
+												"borda",
+												"3"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Molho",
+							"item": [
+								{
+									"name": "listarPizzaMolhoPorNome",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/ingrediente/pizzas/molho?tipoMolho=carne",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"ingrediente",
+												"pizzas",
+												"molho"
+											],
+											"query": [
+												{
+													"key": "tipoMolho",
+													"value": "carne"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "listarPizzaMolho",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/ingrediente/pizzas/molho",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"ingrediente",
+												"pizzas",
+												"molho"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "detalharPizzaMolhoPorId",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/ingrediente/pizzas/molho/2",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"ingrediente",
+												"pizzas",
+												"molho",
+												"2"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "cadastrarPizzaMolho",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "",
+												"value": "",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"tipoMolho\":\"Catupiri\",\r\n    \"precoVenda\":\"6.4\",\r\n    \"dataValidade\":\"12/12/2022\",\r\n    \"peso\":\"130\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/ingrediente/pizzas/molho",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"ingrediente",
+												"pizzas",
+												"molho"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "atualizarPizzaMolho",
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"tipoMolho\":\"Mostarda\",\r\n    \"precoVenda\":\"6.5\",\r\n    \"dataValidade\":\"12/12/2022\",\r\n    \"peso\":\"110\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/ingrediente/pizzas/molho/1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"ingrediente",
+												"pizzas",
+												"molho",
+												"1"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "removerLanchePizzaMolho",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/ingrediente/pizzas/molho/2",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"ingrediente",
+												"pizzas",
+												"molho",
+												"2"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Pizza Recheio",
+							"item": [
+								{
+									"name": "listarPizzaRecheioPorNome",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/ingrediente/pizzas/recheio?tipoRecheio=Mostarda",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"ingrediente",
+												"pizzas",
+												"recheio"
+											],
+											"query": [
+												{
+													"key": "tipoRecheio",
+													"value": "Mostarda"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "listarPizzaRecheio",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/ingrediente/pizzas/recheio",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"ingrediente",
+												"pizzas",
+												"recheio"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "detalharPizzaRecheioPorId",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/ingrediente/pizzas/recheio/2",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"ingrediente",
+												"pizzas",
+												"recheio",
+												"2"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "cadastrarRecheioMolho",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "",
+												"value": "",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"tipoRecheio\":\"Frango\",\r\n    \"precoVenda\":\"14.30\",\r\n    \"dataValidade\":\"12/12/2022\",\r\n    \"peso\":\"230\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/ingrediente/pizzas/recheio",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"ingrediente",
+												"pizzas",
+												"recheio"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "atualizarPizzaRecheio",
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"tipoRecheio\":\"Mostarda\",\r\n    \"precoVenda\":\"6.5\",\r\n    \"dataValidade\":\"12/12/2022\",\r\n    \"peso\":\"110\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/ingrediente/pizzas/recheio1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"ingrediente",
+												"pizzas",
+												"recheio1"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "removerLanchePizzaRecheio",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/ingrediente/pizzas/recheio/6",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"ingrediente",
+												"pizzas",
+												"recheio",
+												"6"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Cadastro lanche",
+					"item": [
+						{
+							"name": "Lanche Molho",
+							"item": [
+								{
+									"name": "listarMolhoPorNome",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/ingrediente/lanches/molho?tipoMolho=carne",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"ingrediente",
+												"lanches",
+												"molho"
+											],
+											"query": [
+												{
+													"key": "tipoMolho",
+													"value": "carne"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "listarMolhos",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/ingrediente/lanches/molho",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"ingrediente",
+												"lanches",
+												"molho"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "detalharMolhoPorId",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/ingrediente/lanches/molho/2",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"ingrediente",
+												"lanches",
+												"molho",
+												"2"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "cadastrarMolho",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "",
+												"value": "",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"tipoMolho\":\"Mostarda 2\",\r\n    \"precoVenda\":\"4.5\",\r\n    \"dataValidade\":\"12/12/2023\",\r\n    \"peso\":\"0.1\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/ingrediente/lanches/molho",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"ingrediente",
+												"lanches",
+												"molho"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "atualizarMolho",
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"tipoMolho\":\"Mostarda\",\r\n    \"precoVenda\":\"6.5\",\r\n    \"dataValidade\":\"12/12/2022\",\r\n    \"peso\":\"110\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/ingrediente/lanches/molho/1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"ingrediente",
+												"lanches",
+												"molho",
+												"1"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "removerLancheMolho",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/ingrediente/lanches/molho/4",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"ingrediente",
+												"lanches",
+												"molho",
+												"4"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Lanche Recheio",
+							"item": [
+								{
+									"name": "listarRecheioPorNome",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/ingrediente/lanches/recheio?tipoRecheio=carne",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"ingrediente",
+												"lanches",
+												"recheio"
+											],
+											"query": [
+												{
+													"key": "tipoRecheio",
+													"value": "carne"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "listarRecheio",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/ingrediente/lanches/recheio",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"ingrediente",
+												"lanches",
+												"recheio"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "detalharRecheioPorId",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/ingrediente/lanches/recheio/2",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"ingrediente",
+												"lanches",
+												"recheio",
+												"2"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "cadastrarRecheio",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "",
+												"value": "",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"tipoRecheio\":\"Frango empanado 2\",\r\n    \"precoVenda\":\"9.5\",\r\n    \"dataValidade\":\"12/12/2023\",\r\n    \"peso\":\"200\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/ingrediente/lanches/recheio",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"ingrediente",
+												"lanches",
+												"recheio"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "atualizarRecheio",
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"tipoRecheio\":\"Hamburguer\",\r\n    \"precoVenda\":\"9.5\",\r\n    \"dataValidade\":\"12/12/2022\",\r\n    \"peso\":\"200\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/ingrediente/recheio/molho/1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"ingrediente",
+												"recheio",
+												"molho",
+												"1"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "removerLancheRecheio",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/ingrediente/recheio/molho/3",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"ingrediente",
+												"recheio",
+												"molho",
+												"3"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Lanche TipoPao",
+							"item": [
+								{
+									"name": "listarTipoPaoPorNome",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/ingrediente/lanches/tipoPao?tipoPao=carne",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"ingrediente",
+												"lanches",
+												"tipoPao"
+											],
+											"query": [
+												{
+													"key": "tipoPao",
+													"value": "carne"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "listarTipoPao",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/ingrediente/lanches/tipoPao",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"ingrediente",
+												"lanches",
+												"tipoPao"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "detalharTipoPaoPorId",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/ingrediente/lanches/tipoPao/2",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"ingrediente",
+												"lanches",
+												"tipoPao",
+												"2"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "cadastrarTipoPao",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "",
+												"value": "",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"tipoPao\":\"Frances 02\",\r\n    \"precoVenda\":\"5.5\",\r\n    \"dataValidade\":\"12/12/2023\",\r\n    \"peso\":\"135\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/ingrediente/lanches/tipoPao",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"ingrediente",
+												"lanches",
+												"tipoPao"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "atualizarTipoPao",
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"tipoPao\":\"Australiano\",\r\n    \"precoVenda\":\"5.5\",\r\n    \"dataValidade\":\"12/12/2022\",\r\n    \"peso\":\"135\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/ingrediente/lanches/tipoPao/1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"ingrediente",
+												"lanches",
+												"tipoPao",
+												"1"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "removerTipoPao",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/ingrediente/lanches/tipoPao/2",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"ingrediente",
+												"lanches",
+												"tipoPao",
+												"2"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Montar Lanche",
+			"item": [
+				{
+					"name": "ListarLanche",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/pedido/lanches?pedidoId=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pedido",
+								"lanches"
+							],
+							"query": [
+								{
+									"key": "pedidoId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListarLanchesPorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/pedido/lanches/18?pedidoId=5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pedido",
+								"lanches",
+								"18"
+							],
+							"query": [
+								{
+									"key": "pedidoId",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CadastrarLanche",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"pedidoId\":\"6\",\r\n    \"lancheTipoPaoId\":\"3\",\r\n    \"lancheRecheioId\":\"3\",\r\n    \"lancheMolhoId\":\"3\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/pedido/lanches",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pedido",
+								"lanches"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AtualizarLanche",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"pedidoId\":\"5\",\r\n    \"lancheTipoPaoId\":\"1\",\r\n    \"lancheRecheioId\":\"1\",\r\n    \"lancheMolhoId\":\"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/pedido/lanches/19",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pedido",
+								"lanches",
+								"19"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteLanche",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/pedido/lanches/19?pedidoId=5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pedido",
+								"lanches",
+								"19"
+							],
+							"query": [
+								{
+									"key": "pedidoId",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Montar Pizza",
+			"item": [
+				{
+					"name": "ListarPizza",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/pedido/pizzas?pedidoId=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pedido",
+								"pizzas"
+							],
+							"query": [
+								{
+									"key": "pedidoId",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListarPizzaPorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/pedido/pizzas/2?pedidoId=5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pedido",
+								"pizzas",
+								"2"
+							],
+							"query": [
+								{
+									"key": "pedidoId",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CadastrarPizza",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"pedidoId\":\"1\",\r\n    \"pizzaBordaId\":\"1\",\r\n    \"pizzaMolhoId\":\"2\",\r\n    \"pizzaRecheioId\":\"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/pedido/pizzas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pedido",
+								"pizzas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AtualizarPizza",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"pedidoId\":\"7\",\r\n    \"pizzaBordaId\":\"3\",\r\n    \"pizzaMolhoId\":\"1\",\r\n    \"pizzaRecheioId\":\"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/pedido/pizzas/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pedido",
+								"pizzas",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletePizza",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/pedido/pizzas/2?pedidoId=5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pedido",
+								"pizzas",
+								"2"
+							],
+							"query": [
+								{
+									"key": "pedidoId",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Montar Salgadinho",
+			"item": [
+				{
+					"name": "ListarSalgadinho",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/pedido/salgadinhos?pedidoId=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pedido",
+								"salgadinhos"
+							],
+							"query": [
+								{
+									"key": "pedidoId",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListarSalgadinhoPorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/pedido/salgadinhos/10?pedidoId=5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pedido",
+								"salgadinhos",
+								"10"
+							],
+							"query": [
+								{
+									"key": "pedidoId",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CadastrarSalgadinho",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"pedidoId\":\"3\",\r\n    \"salgadinhoMassaId\":\"1\",\r\n    \"salgadinhoRecheioId\":\"1\",\r\n    \"salgadinhoTipoPreparoId\":\"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/pedido/salgadinhos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pedido",
+								"salgadinhos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AtualizarSalgadinho",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"pedidoId\":\"6\",\r\n    \"salgadinhoMassaId\":\"1\",\r\n    \"salgadinhoRecheioId\":\"1\",\r\n    \"salgadinhoTipoPreparoId\":\"2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/pedido/salgadinhos/13",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pedido",
+								"salgadinhos",
+								"13"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteSalgadinho",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/pedido/salgadinhos/9?pedidoId=5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pedido",
+								"salgadinhos",
+								"9"
+							],
+							"query": [
+								{
+									"key": "pedidoId",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Fazer Pedido",
+			"item": [
+				{
+					"name": "ListarPedidos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/pedido",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pedido"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListarPedidos Abertos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/pedido/abertos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pedido",
+								"abertos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListarPedidos Processando",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/pedido/processando",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pedido",
+								"processando"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListarPedidos PagoFinalizado",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/pedido/pagofinalizado",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pedido",
+								"pagofinalizado"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListarPedidoPorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/pedido/porId/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pedido",
+								"porId",
+								"3"
+							],
+							"query": [
+								{
+									"key": "pedidoId",
+									"value": "5",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListarPedidoCompletoPorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/pedido/pedidoCompleto/porId/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pedido",
+								"pedidoCompleto",
+								"porId",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RetornaCalculoTrocoPedido",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/pedido/calculaTroco/3?valorPago=50",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pedido",
+								"calculaTroco",
+								"3"
+							],
+							"query": [
+								{
+									"key": "valorPago",
+									"value": "50"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CadastrarPedido",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nomeCliente\":\"Elma Champs\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/pedido",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pedido"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AtualizarPedido",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nomeCliente\":\"Anderson Lenz\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/pedido/?pedidoId=4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pedido",
+								""
+							],
+							"query": [
+								{
+									"key": "pedidoId",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AtribuiStatusProcessandoPedido",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/pedido/atribuiProcessando/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pedido",
+								"atribuiProcessando",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeletarPedido",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/pedido/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pedido",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

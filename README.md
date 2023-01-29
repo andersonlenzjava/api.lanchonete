@@ -164,23 +164,23 @@ Para o seu cliente, é imprescindível que o sistema tenha algumas funções. </
 
    <p>Neste momento para utilizar o sistema é necessário rodar o sistema offline dentro de alguma IDE, através do Spring Boot.</p>
    <p><strong>Etapas:</strong></p>
-     Download do projeto e descompactar </br>
-     Fazer a atualização das dependências com o Maven</br>
-     Fazer a configuração do banco de dados de sua preferência</br>
-     Criar o banco de dados </br>
-     Configurar a API a este banco de dados</br>
-     Rodar o projeto com a app.properties em spring.jpa.hibernate.ddl-auto=create</br>
-     Em seguida colocar spring.jpa.hibernate.ddl-auto=none</br>
-     Abrir a collection de endpoints com o software que gerencia requisições PostMan</br>
+    - Download do projeto e descompactar </br>
+    - Fazer a atualização das dependências com o Maven</br>
+    - Fazer a configuração do banco de dados de sua preferência</br>
+    - Criar o banco de dados </br>
+    - Configurar a API a este banco de dados</br>
+    - Rodar o projeto com a app.properties em spring.jpa.hibernate.ddl-auto=create</br>
+    - Em seguida colocar spring.jpa.hibernate.ddl-auto=none</br>
+    - Abrir a collection de endpoints com o software que gerencia requisições PostMan</br>
 
 #### Na operacionalização do sistema obedecer a seguinte sequência:
 
-   Cadastrar todos os ingredientes conforme os exemplos em JSON apresentados na collection de endpoints junto ao arquivo do postman.</br>
-   Fazer a abertura de um novo pedido. </br>
-   Com o id do pedido e dos ingredientes, criar os itens deste pedido podendo ser:</br>
-   Lanche, Pizza ou Salgadinho. </br>
-   Mudar para status processando. </br>
-   E após o pedido estar pronto, realizar o pagamento através do endpoint RetornaCalculoTrocoPedido.</br>
+- Cadastrar todos os ingredientes conforme os exemplos em JSON apresentados na collection de endpoints junto ao arquivo do postman.</br>
+- Fazer a abertura de um novo pedido. </br>
+- Com o id do pedido e dos ingredientes, criar os itens deste pedido podendo ser:</br>
+- Lanche, Pizza ou Salgadinho. </br>
+- Mudar para status processando. </br>
+- E após o pedido estar pronto, realizar o pagamento através do endpoint RetornaCalculoTrocoPedido.</br>
 
 ## Um melhor detalhamento do uso desta API é apresentado no video deste link.
 
